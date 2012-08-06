@@ -23,7 +23,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-alignment bottom_right
+alignment bottom_left
 double_buffer yes
 background no
 border_width 1
@@ -59,21 +59,11 @@ show_graph_range no
 
 TEXT
 ${font ubuntu:size=8}
-$alignr PROCESSES       CPU%
-$alignr${color}${top name 1}  ${top cpu 1}
-$alignr${color}${top name 2}  ${top cpu 2}
-$alignr${color}${top name 3}  ${top cpu 3}
-$alignr${color}${top name 4}  ${top cpu 4}
-$alignr${color}${top name 5}  ${top cpu 5}
+CPU% PROCESSES
+${top cpu 1}   ${top name 1} 
+${top cpu 2}   ${top name 2} 
+${top cpu 3}   ${top name 3} 
+${top cpu 4}   ${top name 4} 
+${top cpu 5}   ${top name 5}  
 
-${color}${font ubuntu:size=10}Uptime: ${color cyan}$uptime$color   |   CPU: ${color cyan}${cpu}%$color   |   RAM: ${color cyan}$mem$color   |   Network: Up ${upspeedgraph wlan0 10,40 000000 000000}  Down ${downspeedgraph wlan0 10,40 000000 000000}   |   Root: ${color cyan}${fs_used /} $color/${fs_size /}   Home: ${color cyan}${fs_used /mnt/data} $color/${fs_size /mnt/data}  
-##
-##
-##
-##
-#$alignr$color Swap: $swapperc%
-#$alignr Fan 1: ${exec sensors|grep 'fan1'|awk '{print $2}'} rpm
-#$alignr Fan 2: ${exec sensors|grep 'fan3'|awk '{print $2}'} rpm
-#$alignr$color Backup: 
-#${alignr}${fs_used /mnt/Backup}/${fs_size /mnt/Backup} 
-#${alignr}${fs_bar 6,70 /mnt/Backup}
+${color}${font ubuntu:size=10}${nodename} uptime: ${color cyan}$uptime$color   |   OS: ${color cyan}${sysname} ${kernel}$color   |   CPU0: ${color cyan}${cpu cpu0}%$color CPU1: ${color cyan}${cpu cpu1}%$color   |   RAM: ${color cyan}$mem$color   |   Network: Up ${upspeedgraph wlan0 10,40 000000 000000} ${totalup wlan0}  Down ${downspeedgraph wlan0 10,40 000000 000000} ${totaldown wlan0}   |   Root: ${color cyan}${fs_used /} $color/${fs_size /}   Home: ${color cyan}${fs_used /mnt/data} $color/${fs_size /mnt/data}  
