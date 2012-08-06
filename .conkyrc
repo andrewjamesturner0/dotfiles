@@ -23,14 +23,14 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-alignment bottom_right
+alignment bottom_left
 double_buffer yes
-background no
+background yes
 border_width 1
 cpu_avg_samples 2
-default_color black
-default_outline_color black
-default_shade_color black
+default_color grey
+default_outline_color white
+default_shade_color white
 draw_borders no
 draw_graph_borders yes
 draw_outline no
@@ -39,7 +39,7 @@ use_xft yes
 xftfont ubuntu:size=10
 gap_x 5
 gap_y 1
-minimum_size 5 5
+minimum_size 1680 5
 net_avg_samples 2
 no_buffers yes
 out_to_console no
@@ -48,32 +48,25 @@ extra_newline no
 own_window yes 
 own_window_type sticky 
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager 
-own_window_argb_visual yes 
+own_window_argb_visual no       ##This controls transparency on gnome
 own_window_argb_value 0
 stippled_borders 0
-update_interval 1.0
+update_interval 2.0
 uppercase no
 use_spacer none
 show_graph_scale no
 show_graph_range no
 
 TEXT
-${font ubuntu:size=8}
-$alignr Processes:     CPU% RAM%
-$alignr${color}${top name 1}  ${top cpu 1}  ${top mem 1}
-$alignr${color}${top name 2}  ${top cpu 2}  ${top mem 2}
-$alignr${color}${top name 3}  ${top cpu 3}  ${top mem 3}
-$alignr${color}${top name 4}  ${top cpu 4}  ${top mem 4}
-$alignr${color}${top name 5}  ${top cpu 5}  ${top mem 5}
-
-${color}${font ubuntu:size=10}Uptime: ${color black}$uptime$color   |   CPU: ${color black}${cpu}%$color   |   RAM: ${color black}$mem$color   |   Network: Up ${upspeedgraph wlan0 10,40 000000 000000}  Down ${downspeedgraph wlan0 10,40 000000 000000}   |   Root: ${color black}${fs_used /} $color/${fs_size /}   Home: ${color black}${fs_used /mnt/data} $color/${fs_size /mnt/data}  
-##
-##
-##
-##
-#$alignr$color Swap: $swapperc%
-#$alignr Fan 1: ${exec sensors|grep 'fan1'|awk '{print $2}'} rpm
-#$alignr Fan 2: ${exec sensors|grep 'fan3'|awk '{print $2}'} rpm
-#$alignr$color Backup: 
-#${alignr}${fs_used /mnt/Backup}/${fs_size /mnt/Backup} 
-#${alignr}${fs_bar 6,70 /mnt/Backup}
+#${font ubuntu:size=8}
+#CPU% PROCESSES
+#${top cpu 1} ${top name 1} 
+#${top cpu 2}   ${top name 2} 
+#${top cpu 3}   ${top name 3} 
+#${top cpu 4}   ${top name 4} 
+#${top cpu 5}   ${top name 5}  
+#
+#
+#
+#
+${color}${font ubuntu:size=10}${nodename} uptime: ${color cyan}$uptime$color   |   OS: ${color cyan}${sysname} ${kernel}$color   |   Root: ${color cyan}${fs_used /} $color/${fs_size /}   Home: ${color cyan}${fs_used /mnt/data} $color/${fs_size /mnt/data}   |   CPU0: ${cpugraph cpu0 10,40 000000 000000} ${color cyan}${cpu cpu0}% ${exec sensors|grep 'Core 0'|awk '{print $3}'}$color CPU1: ${cpugraph cpu1 10,40 000000 000000} ${color cyan}${cpu cpu1}% ${exec sensors|grep 'Core 1'|awk '{print $3}'}$color   |   RAM: ${color cyan}$mem$color   |   Net-Up: ${upspeedgraph wlan0 10,40 000000 000000} ${color cyan}${upspeed wlan0}$color /${totalup wlan0}  Net-Down: ${downspeedgraph wlan0 10,40 000000 000000} ${color cyan}${downspeed wlan0}$color /${totaldown wlan0}
