@@ -39,7 +39,7 @@ use_xft yes
 xftfont ubuntu:size=10
 gap_x 5
 gap_y 1
-minimum_size 1680 5
+minimum_size 1680 3
 net_avg_samples 2
 no_buffers yes
 out_to_console no
@@ -69,4 +69,4 @@ TEXT
 #
 #
 #
-${color}${font ubuntu:size=10}${nodename} uptime: ${color cyan}$uptime$color   |   OS: ${color cyan}${sysname} ${kernel}$color   |   Root: ${color cyan}${fs_used /} $color/${fs_size /}   Home: ${color cyan}${fs_used /mnt/data} $color/${fs_size /mnt/data}   |   CPU0: ${cpugraph cpu0 10,40 000000 000000} ${color cyan}${cpu cpu0}% ${exec sensors|grep 'Core 0'|awk '{print $3}'}$color CPU1: ${cpugraph cpu1 10,40 000000 000000} ${color cyan}${cpu cpu1}% ${exec sensors|grep 'Core 1'|awk '{print $3}'}$color   |   RAM: ${color cyan}$mem$color   |   Net-Up: ${upspeedgraph wlan0 10,40 000000 000000} ${color cyan}${upspeed wlan0}$color /${totalup wlan0}  Net-Down: ${downspeedgraph wlan0 10,40 000000 000000} ${color cyan}${downspeed wlan0}$color /${totaldown wlan0}
+${color}${font ubuntu:size=10}${nodename}: ${color cyan}${sysname} ${kernel}${color}   |   uptime: ${color cyan}$uptime$color   |   Root: ${color cyan}${fs_used /} $color/${fs_size /}   Home: ${color cyan}${fs_used /mnt/data} $color/${fs_size /mnt/data}   |   CPU0: ${cpugraph cpu0 10,40 000000 000000} ${color cyan}${cpu cpu0}% ${exec sensors|grep 'Core 0'|awk '{print $3}'}$color CPU1: ${cpugraph cpu1 10,40 000000 000000} ${color cyan}${cpu cpu1}% ${exec sensors|grep 'Core 1'|awk '{print $3}'}$color   |   RAM: ${color cyan}$mem$color   |   Net-Up: ${upspeedgraph wlan0 10,40 000000 000000} ${color cyan}${upspeed wlan0}$color /${totalup wlan0}  Net-Down: ${downspeedgraph wlan0 10,40 000000 000000} ${color cyan}${downspeed wlan0}$color /${totaldown wlan0}
