@@ -22,7 +22,7 @@ set cmdheight=2                                     " Set the command window hei
 set number                                          " Display line numbers on the left
 set notimeout ttimeout ttimeoutlen=200              " Quickly time out on keycodes, but never time out on mappings
 set pastetoggle=<F11>                               " Use <F11> to toggle between 'paste' and 'nopaste'
-set shiftwidth=2                                    " Indentation settings for using 2 spaces instead of tabs. Do not change 
+set shiftwidth=4                                    " Indentation settings for using 4 spaces instead of tabs. Do not change 
                                                     " 'tabstop' from its default value of 8 with this setup.
 set softtabstop=2
 set expandtab
