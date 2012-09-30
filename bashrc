@@ -15,8 +15,7 @@ alias xraspi='ssh root@Raspberry-pi shutdown -Ph now'
 # misc
 alias ls='ls --color=auto -lh'
 alias du='du -h --all --max-depth=1'
-alias logs='more *.log | cat'
+alias logs='more /home/andrew/.script-logs/*.log | cat'
 alias home='cd && clear'
 # places
-alias dev='cd home/andrew/Dev'
-alias scriptlogs='cd /home/andrew/.script-logs'
+alias dev='cd /home/andrew/Dev'
