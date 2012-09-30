@@ -18,4 +18,5 @@ alias du='du -h --all --max-depth=1'
 alias logs='more *.log | cat'
 alias home='cd && clear'
 # places
-alias dev='cd ~/Dev'
+alias dev='cd home/andrew/Dev'
+alias scriptlogs='cd /home/andrew/.script-logs'
