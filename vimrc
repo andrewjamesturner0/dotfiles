@@ -24,7 +24,7 @@ set notimeout ttimeout ttimeoutlen=200              " Quickly time out on keycod
 set pastetoggle=<F11>                               " Use <F11> to toggle between 'paste' and 'nopaste'
 set shiftwidth=4                                    " Indentation settings for using 4 spaces instead of tabs. Do not change 
                                                     " 'tabstop' from its default value of 8 with this setup.
-set softtabstop=2
+set softtabstop=4
 set expandtab
 map Y y$                                            " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy, 
                                                     " which is the default
