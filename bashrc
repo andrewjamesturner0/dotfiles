@@ -10,8 +10,8 @@ EDITOR=vim
 
 # ssh
 alias laptop='ssh user@archlaptop'
-alias raspi='ssh root@Raspberry-pi'
-alias xraspi='ssh root@Raspberry-pi shutdown -Ph now' 
+alias raspi='ssh user@Raspberry-pi'
+alias xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
 # misc
 alias ls='ls --color=auto -lh'
 alias du='du -h --all --max-depth=1'
