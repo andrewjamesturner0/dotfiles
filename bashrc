@@ -19,3 +19,6 @@ alias logs='more /home/andrew/.script-logs/*.log | cat'
 alias home='cd && clear'
 # places
 alias dev='cd /home/andrew/Dev'
+# functions
+tarxz() { tar cvf "${1%%/}.tar.xz" "${1%%/}/"; }
+targz() { tar cvf "${1%%/}.tar.gz" "${1%%/}/"; }
