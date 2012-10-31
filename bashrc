@@ -7,11 +7,35 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core"
 export EDITOR=vim
 PS1='\u@\h [\W]: '
+if [ -t 0 -a -t 1 ]; then
+    #kill flow control
+    stty -ixon
+    stty -ixoff
+    if [ ${BASH_VERSINFO[0]} -ge 4 ]; then
+        shopt -s cdspell
+        shopt -s extglob
+        shopt -s cmdhist
+        shopt -s checkwinsize
+        shopt -s no_empty_cmd_completion
+        shopt -u promptvars
+        shopt -s histappend
+        set -o noclobber
+        shopt -s dirspell
+        #don't echo ^C
+        stty -ctlecho
+    fi
+fi
 
 # ssh
 alias laptop='ssh user@archlaptop'
 alias raspi='ssh user@Raspberry-pi'
 alias xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
+# git
+alias commit='git commit -am'
+alias status='git status'
+alias checkout='git checkout'
+alias branch='git branch'
+alias rebase='git rebase'
 # misc
 alias ls='ls --color=auto -lh'
 alias du='du -h --all --max-depth=1'
