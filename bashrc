@@ -5,8 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core"
+export EDITOR=vim
 PS1='\u@\h [\W]: '
-EDITOR=vim
 
 # ssh
 alias laptop='ssh user@archlaptop'
@@ -22,3 +22,4 @@ alias dev='cd /home/andrew/Dev'
 # functions
 tarxz() { tar cvf "${1%%/}.tar.xz" "${1%%/}/"; }
 targz() { tar cvf "${1%%/}.tar.gz" "${1%%/}/"; }
+mkcd() { mkdir -p "$1" && cd "$1"; }
