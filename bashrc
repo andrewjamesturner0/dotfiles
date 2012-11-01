@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core"
 export EDITOR=vim
-PS1='\u@\h [\W]: '
+PS1='\u@\h [\w]: '
 if [ -t 0 -a -t 1 ]; then
     #kill flow control
     stty -ixon
@@ -21,8 +21,6 @@ if [ -t 0 -a -t 1 ]; then
         shopt -s histappend
         set -o noclobber
         shopt -s dirspell
-        #don't echo ^C
-        stty -ctlecho
     fi
 fi
 
