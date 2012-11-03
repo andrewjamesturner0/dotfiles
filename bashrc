@@ -31,6 +31,7 @@ alias xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now'
 # git
 alias commit='git commit -am'
 alias status='git status'
+alias push='git push'
 alias checkout='git checkout'
 alias branch='git branch'
 alias rebase='git rebase'
