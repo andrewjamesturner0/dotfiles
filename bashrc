@@ -28,10 +28,12 @@ fi
 alias laptop='ssh user@archlaptop'
 alias raspi='ssh user@Raspberry-pi'
 alias xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
+alias server='ssh user@bsdserver'
 # git
 alias commit='git commit -am'
 alias status='git status'
 alias push='git push'
+alias pull='git pull'
 alias checkout='git checkout'
 alias branch='git branch'
 alias rebase='git rebase'
