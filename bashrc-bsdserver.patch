@@ -1,0 +1,12 @@
+31,32d30
+< alias server='ssh user@bsdserver'
+< alias xserver='ssh user@bsdserver sudo shutdown -p now'
+43,45c41
+< alias ls='ls --color=auto -lh'
+< alias du='du -h --all --max-depth=1'
+< alias logs='more /home/andrew/.script-logs/*.log | cat'
+---
+> alias ls='ls -lh'
+47,48d42
+< # places
+< alias dev='cd /home/andrew/Dev'
