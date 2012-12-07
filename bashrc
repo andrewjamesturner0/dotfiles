@@ -44,6 +44,7 @@ alias branch='git branch'
 alias rebase='git rebase'
 # misc
 alias ls='ls --color=auto -lh'
+alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
 alias logs='more *.log | cat'
 # places
