@@ -73,3 +73,7 @@ extract () {
         echo "$0: unreadable file: $1" >&2
     fi
 }
+# systemd shortcuts
+startd() { sudo systemctl start $1.service ; sudo systemctl status $1.service; }
+restartd() { sudo systemctl restart $1.service ; sudo systemctl status $1.service; }
+stopd() { sudo systemctl stop $1.service ; sudo systemctl status $1.service; }
