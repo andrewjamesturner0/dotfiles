@@ -26,10 +26,13 @@ fi
 
 # ssh
 alias laptop='ssh user@archlaptop'
+alias Xlaptop='ssh user@archlaptop sudo shutdown -Ph now'
 alias raspi='ssh user@Raspberry-pi'
-alias xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
+alias Xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
 alias server='ssh user@bsdserver'
-alias xserver='ssh user@bsdserver sudo shutdown -p now'
+alias Xserver='ssh user@bsdserver sudo shutdown -p now'
+# wol
+alias wakeserver='wol 30:85:a9:3c:4e:3d'
 # git
 alias commit='git commit -am'
 alias add='git add'
@@ -42,9 +45,9 @@ alias rebase='git rebase'
 # misc
 alias ls='ls --color=auto -lh'
 alias du='du -h --all --max-depth=1'
-alias logs='more /home/andrew/.script-logs/*.log | cat'
-alias home='cd && clear'
+alias logs='more *.log | cat'
 # places
+alias home='cd && clear'
 alias dev='cd /home/andrew/Dev'
 # functions
 tarxz() { tar cvf "${1%%/}.tar.xz" "${1%%/}/"; }
