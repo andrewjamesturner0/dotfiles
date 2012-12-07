@@ -77,3 +77,7 @@ extract () {
 startd() { sudo systemctl start $1.service ; sudo systemctl status $1.service; }
 restartd() { sudo systemctl restart $1.service ; sudo systemctl status $1.service; }
 stopd() { sudo systemctl stop $1.service ; sudo systemctl status $1.service; }
+enabled() { sudo systemctl enable $1.service ; ls -l /etc/systemd/system/multi-user.target.wants; }
+disabled() { sudo systemctl disable $1.service ; ls -l /etc/systemd/system/multi-user.target.wants; }
+listd() { ls -hl /etc/systemd/system/multi-user.target.wants; }
+statusd() { sudo systemctl status $1.service; }
