@@ -50,6 +50,9 @@ alias logs='more *.log | cat'
 # places
 alias home='cd && clear'
 alias dev='cd /home/andrew/Dev'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 # functions
 tarxz() { tar cvf "${1%%/}.tar.xz" "${1%%/}/"; }
 targz() { tar cvf "${1%%/}.tar.gz" "${1%%/}/"; }
