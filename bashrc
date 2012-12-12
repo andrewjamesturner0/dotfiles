@@ -32,7 +32,7 @@ alias Xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now'
 alias server='ssh user@bsdserver'
 alias Xserver='ssh user@bsdserver sudo shutdown -p now'
 # wol
-alias wakeserver='wol 30:85:a9:3c:4e:3d'
+alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh user@bsdserver; do sleep 15; done'
 # git
 alias commit='git commit -am'
 alias add='git add'
