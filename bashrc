@@ -27,7 +27,7 @@ fi
 # ssh
 alias laptop='ssh user@archlaptop'
 alias Xlaptop='ssh user@archlaptop sudo shutdown -Ph now'
-alias raspi='ssh user@Raspberry-pi'
+alias raspi='until ssh user@Raspberry-pi; do sleep 15; done'
 alias Xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
 alias server='ssh user@bsdserver'
 alias Xserver='ssh user@bsdserver sudo shutdown -p now'
