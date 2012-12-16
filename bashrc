@@ -29,7 +29,7 @@ alias laptop='ssh user@archlaptop'
 alias Xlaptop='ssh user@archlaptop sudo shutdown -Ph now'
 alias raspi='until ssh user@Raspberry-pi; do sleep 15; done'
 alias Xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
-alias server='ssh user@bsdserver'
+alias server='until ssh user@bsdserver; do sleep 15; done'
 alias Xserver='ssh user@bsdserver sudo shutdown -p now'
 # wol
 alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh user@bsdserver; do sleep 15; done'
