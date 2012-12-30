@@ -1,12 +1,10 @@
-#
 # ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+# shell options
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core"
 export EDITOR=vim
-PS1='\u@\h [\w]: '
 if [ -t 0 -a -t 1 ]; then
     #kill flow control
     stty -ixon
@@ -24,13 +22,16 @@ if [ -t 0 -a -t 1 ]; then
     fi
 fi
 
+# PS1
+PS1='\u@\h [\w]: '
+
 # ssh
 alias laptop='ssh user@archlaptop'
-alias Xlaptop='ssh user@archlaptop sudo shutdown -Ph now'
+alias xxlaptop='ssh user@archlaptop sudo shutdown -Ph now'
 alias raspi='until ssh user@Raspberry-pi; do sleep 15; done'
-alias Xraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
+alias xxraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
 alias server='until ssh user@bsdserver; do sleep 15; done'
-alias Xserver='ssh user@bsdserver sudo shutdown -p now'
+alias xxserver='ssh user@bsdserver sudo shutdown -p now'
 # wol
 alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh user@bsdserver; do sleep 15; done'
 # git
