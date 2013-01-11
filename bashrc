@@ -3,7 +3,7 @@
 [[ $- != *i* ]] && return
 
 # shell options
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core:/home/andrew/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core"
 export EDITOR=vim
 if [ -t 0 -a -t 1 ]; then
     #kill flow control
