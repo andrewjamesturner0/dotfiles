@@ -28,7 +28,7 @@ PS1='\u@\h [\w]: '
 # ssh
 alias laptop='ssh user@archlaptop'
 alias xxlaptop='ssh user@archlaptop sudo shutdown -Ph now'
-alias raspi='until ssh user@Raspberry-pi; do sleep 15; done'
+alias raspi='until ssh user@Raspberry-pi; do sleep 45; done'
 alias xxraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
 alias ccserver='until ssh user@bsdserver; do sleep 15; done'
 alias server='ssh user@bsdserver'
