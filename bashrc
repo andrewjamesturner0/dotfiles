@@ -34,7 +34,7 @@ alias ccserver='until ssh user@bsdserver; do sleep 15; done'
 alias server='ssh user@bsdserver'
 alias xxserver='ssh user@bsdserver sudo shutdown -p now'
 # wol
-alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh user@bsdserver; do sleep 15; done'
+alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh user@bsdserver; do sleep 45; done'
 # git
 alias commit='git commit -am'
 alias add='git add'
