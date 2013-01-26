@@ -59,15 +59,13 @@ show_graph_scale no
 show_graph_range no
 
 TEXT
-#${font ubuntu:size=8}
-#CPU% PROCESSES
-#${top cpu 1} ${top name 1} 
-#${top cpu 2}   ${top name 2} 
-#${top cpu 3}   ${top name 3} 
-#${top cpu 4}   ${top name 4} 
-#${top cpu 5}   ${top name 5}  
-#
-#
-#
-#
-${color}${font ubuntu:size=9}${nodename}: ${color cyan}${sysname} ${kernel}${color}   |   up: ${color cyan}$uptime$color   |   Root: ${color cyan}${fs_used /} $color/${fs_size /}      Home: ${color cyan}${fs_used /mnt/data} $color/${fs_size /mnt/data}   |   CPU0: ${cpugraph cpu0 10,50 000000 000000} ${color cyan}${cpu cpu0}% ${exec sensors | grep 'Core 0' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}$color      CPU1: ${cpugraph cpu1 10,50 000000 000000} ${color cyan}${cpu cpu1}% ${exec sensors | grep 'Core 1' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}$color  |   RAM: ${color cyan}$mem$color       SWAP:${color cyan} $swap${color}   |   Net-Up: ${upspeedgraph enp0s25 10,40 000000 000000} ${color cyan}${upspeed enp0s25}$color/${totalup enp0s25}      Net-Down: ${downspeedgraph enp0s25 10,40 000000 000000} ${color cyan}${downspeed enp0s25}$color/${totaldown enp0s25}
+${color}${font ubuntu:size=9}${nodename}: ${color cyan}${sysname} ${kernel}${color}   \
+|   up: ${color cyan}$uptime$color   \
+|   Root: ${color cyan}${fs_used /} $color/${fs_size /}\
+   Home: ${color cyan}${fs_used /mnt/data} $color/${fs_size /mnt/data}   \
+|   CPU0: ${cpugraph cpu0 10,50 000000 000000} ${color cyan}${cpu cpu0}% ${exec sensors | grep 'Core 0' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}$color\
+   CPU1: ${cpugraph cpu1 10,50 000000 000000} ${color cyan}${cpu cpu1}% ${exec sensors | grep 'Core 1' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}$color  \
+|   RAM: ${color cyan}$mem$color\
+   SWAP:${color cyan} $swap${color}   \
+|   Net-Up: ${upspeedgraph enp0s25 10,40 000000 000000} ${color cyan}${upspeed enp0s25}$color/${totalup enp0s25}\
+   Net-Down: ${downspeedgraph enp0s25 10,40 000000 000000} ${color cyan}${downspeed enp0s25}$color/${totaldown enp0s25}
