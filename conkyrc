@@ -48,8 +48,8 @@ extra_newline no
 own_window yes 
 own_window_type sticky 
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager 
-own_window_argb_visual yes      ##This controls transparency on gnome
-own_window_argb_value 0
+own_window_argb_visual yes ##This controls transparency on gnome
+own_window_argb_value 200 ##This controls the opacity
 pad_percents 2
 stippled_borders 0
 update_interval 2.0
