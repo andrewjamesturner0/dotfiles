@@ -35,6 +35,9 @@ alias server='ssh user@bsdserver'
 alias xxserver='ssh user@bsdserver sudo shutdown -p now'
 # wol
 alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh user@bsdserver; do sleep 45; done'
+# vnc
+alias servervnc='server vncserver -depth 24 -geometry 1366x768'
+alias xxservervnc='server vncserver -kill :1'
 # git
 alias commit='git commit -am'
 alias add='git add'
