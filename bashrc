@@ -52,7 +52,7 @@ alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
 alias logs='more *.log | cat'
-alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$1" --output=$HOME/tmp --verbose --progress --mirror && eject"
+alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$(date +%F_%H:%M)" --output=$HOME/tmp --verbose --progress --mirror && eject"
 # places
 alias home='cd && clear'
 alias dev='cd /home/andrew/Dev'
