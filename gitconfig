@@ -1,0 +1,9 @@
+[user]
+	name = Andrew Turner
+	email = andrewjamesturner0@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
+[push]
+	default = simple
