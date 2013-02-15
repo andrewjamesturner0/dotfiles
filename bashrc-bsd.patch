@@ -21,11 +21,13 @@
 > alias ls='ls -lh'
 > alias lsa='ls -lha'
 > alias du='du -h -d 1'
-55d44
+55c45
 < alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$(date +%F_%H:%M)" --output=$HOME/tmp --verbose --progress --mirror && eject"
-58d46
+---
+> alias ubsd="sudo portsnap fetch update && sudo portmaster --no-confirm -adyGH"
+57d46
 < alias dev='cd /home/andrew/Dev'
-82,90d69
+81,89d69
 < serverrsync() { rsync -zavmHAX "$1" user@bsdserver:/home/user; }
 < # systemd shortcuts
 < startd() { sudo systemctl start $1.service ; sudo systemctl status $1.service; }
