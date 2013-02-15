@@ -1,0 +1,37 @@
+29,31c29
+< alias laptop='ssh user@archlaptop'
+< alias xxlaptop='ssh user@archlaptop sudo shutdown -Ph now'
+< alias raspi='until ssh user@Raspberry-pi; do sleep 45; done'
+---
+> alias raspi='until ssh user@Raspberry-pi; do sleep 15; done'
+33,40d30
+< alias ccserver='until ssh user@bsdserver; do sleep 15; done'
+< alias server='ssh user@bsdserver'
+< alias xxserver='ssh user@bsdserver sudo shutdown -p now'
+< # wol
+< alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh user@bsdserver; do sleep 45; done'
+< # vnc
+< alias servervnc='server vncserver -depth 24 -geometry 1366x768'
+< alias xxservervnc='server vncserver -kill :1'
+51,53c41,43
+< alias ls='ls --color=auto -lh'
+< alias lsa='ls --color=auto -lha'
+< alias du='du -h --all --max-depth=1'
+---
+> alias ls='ls -lh'
+> alias lsa='ls -lha'
+> alias du='du -h -d 1'
+55d44
+< alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$(date +%F_%H:%M)" --output=$HOME/tmp --verbose --progress --mirror && eject"
+58d46
+< alias dev='cd /home/andrew/Dev'
+82,90d69
+< serverrsync() { rsync -zavmHAX "$1" user@bsdserver:/home/user; }
+< # systemd shortcuts
+< startd() { sudo systemctl start $1.service ; sudo systemctl status $1.service; }
+< restartd() { sudo systemctl restart $1.service ; sudo systemctl status $1.service; }
+< stopd() { sudo systemctl stop $1.service ; sudo systemctl status $1.service; }
+< enabled() { sudo systemctl enable $1.service ; ls -l /etc/systemd/system/multi-user.target.wants; }
+< disabled() { sudo systemctl disable $1.service ; ls -l /etc/systemd/system/multi-user.target.wants; }
+< listd() { ls -hl /etc/systemd/system/multi-user.target.wants; }
+< statusd() { sudo systemctl status $1.service; }

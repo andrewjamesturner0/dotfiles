@@ -1,0 +1,6 @@
+55c55
+< alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$(date +%F_%H:%M)" --output=$HOME/tmp --verbose --progress --mirror && eject"
+---
+> alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$1" --output=$HOME/tmp --verbose --progress --mirror && eject"
+82d81
+< serverrsync() { rsync -zavmHAX "$1" user@bsdserver:/home/user; }
