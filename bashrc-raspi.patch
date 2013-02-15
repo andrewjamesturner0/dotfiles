@@ -1,6 +1,13 @@
-55c55
+31,32d30
+< alias raspi='until ssh user@Raspberry-pi; do sleep 45; done'
+< alias xxraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
+38,40d35
+< # vnc
+< alias servervnc='server vncserver -depth 24 -geometry 1366x768'
+< alias xxservervnc='server vncserver -kill :1'
+55d49
 < alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$(date +%F_%H:%M)" --output=$HOME/tmp --verbose --progress --mirror && eject"
----
-> alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$1" --output=$HOME/tmp --verbose --progress --mirror && eject"
-82d81
+58d51
+< alias dev='cd /home/andrew/Dev'
+82d74
 < serverrsync() { rsync -zavmHAX "$1" user@bsdserver:/home/user; }
