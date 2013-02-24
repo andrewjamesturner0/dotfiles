@@ -26,15 +26,13 @@ fi
 PS1='\u@\h [\w]: '
 
 # ssh
-alias laptop='ssh user@archlaptop'
-alias xxlaptop='ssh user@archlaptop sudo shutdown -Ph now'
 alias raspi='until ssh user@Raspberry-pi; do sleep 45; done'
 alias xxraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
-alias ccserver='until ssh user@bsdserver; do sleep 15; done'
-alias server='ssh user@bsdserver'
-alias xxserver='ssh user@bsdserver sudo shutdown -p now'
+alias ccserver='until ssh at@phq2; do sleep 15; done'
+alias server='ssh at@phq2'
+alias xxserver='ssh at@phq2 sudo shutdown -p now'
 # wol
-alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh user@bsdserver; do sleep 45; done'
+alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh at@phq2; do sleep 45; done'
 # vnc
 alias servervnc='server vncserver -depth 24 -geometry 1366x768'
 alias xxservervnc='server vncserver -kill :1'
@@ -55,7 +53,7 @@ alias logs='more *.log | cat'
 alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$(date +%F_%H:%M)" --output=$HOME/tmp --verbose --progress --mirror && eject"
 # places
 alias home='cd && clear'
-alias dev='cd /home/andrew/Dev'
+alias dev='cd $HOME/Dev'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -79,7 +77,7 @@ extract () {
         echo "$0: unreadable file: $1" >&2
     fi
 }
-serverrsync() { rsync -zavmHAX "$1" user@bsdserver:/home/user; }
+serverrsync() { rsync -zavmHAX "$1" at@phq2:/home/at; }
 # systemd shortcuts
 startd() { sudo systemctl start $1.service ; sudo systemctl status $1.service; }
 restartd() { sudo systemctl restart $1.service ; sudo systemctl status $1.service; }
