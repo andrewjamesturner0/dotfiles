@@ -1,28 +1,3 @@
-# Conky, a system monitor, based on torsmo
-#
-# Any original torsmo code is licensed under the BSD license
-#
-# All code written since the fork of torsmo is licensed under the GPL
-#
-# Please see COPYING for details
-#
-# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
-# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
-# All rights reserved.
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-
 alignment bottom_left
 double_buffer yes
 background yes
@@ -63,11 +38,8 @@ ${color}${font ubuntu:size=9}${nodename}: ${color cyan}${sysname} ${kernel}${col
 |   up: ${color cyan}$uptime$color   \
 |   Root: ${color cyan}${fs_used /} $color/${fs_size /}\
    Home: ${color cyan}${fs_used /home} $color/${fs_size /home}   \
-|   Temp:${color cyan} ${exec sensors | grep 'Core 1' | sed -e s/°C.*\)/°C/ -e s/Core.*+//} : ${exec sensors | grep 'Core 0' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}$color    \
-|   CPU0: ${cpugraph cpu0 10,30 000000 000000}\
-   CPU1: ${cpugraph cpu1 10,30 000000 000000}\
-   CPU2: ${cpugraph cpu2 10,30 000000 000000}\
-   CPU3: ${cpugraph cpu3 10,30 000000 000000}   \
-|   RAM: ${color cyan}$mem$color    \
-|   Net-Up: ${upspeedgraph wlp3s0 10,40 000000 000000} ${color cyan}${upspeed wlp3s0}$color/${totalup wlp3s0}\
-   Net-Down: ${downspeedgraph wlp3s0 10,40 000000 000000} ${color cyan}${downspeed  wlp3s0}$color/${totaldown wlp3s0}
+|   Core temp:${color cyan} ${exec sensors | grep 'Core 0' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}$color\
+   CPU: ${color cyan}${cpu cpu0}%${color} ${cpugraph cpu0 10,50 000000 000000}\
+   RAM: ${color cyan}$mem$color    \
+|   Net-Up: ${upspeedgraph wlp3s0 10,50 000000 000000} ${color cyan}${upspeed wlp3s0}$color/${totalup wlp3s0}\
+   Net-Down: ${downspeedgraph wlp3s0 10,50 000000 000000} ${color cyan}${downspeed  wlp3s0}$color/${totaldown wlp3s0}
