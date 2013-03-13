@@ -1,19 +1,17 @@
-29,31c29
-< alias laptop='ssh user@archlaptop'
-< alias xxlaptop='ssh user@archlaptop sudo shutdown -Ph now'
+29c29
 < alias raspi='until ssh user@Raspberry-pi; do sleep 45; done'
 ---
 > alias raspi='until ssh user@Raspberry-pi; do sleep 15; done'
-33,40d30
-< alias ccserver='until ssh user@bsdserver; do sleep 15; done'
-< alias server='ssh user@bsdserver'
-< alias xxserver='ssh user@bsdserver sudo shutdown -p now'
+31,38d30
+< alias ccserver='until ssh at@phq2; do sleep 15; done'
+< alias server='ssh at@phq2'
+< alias xxserver='ssh at@phq2 sudo shutdown -p now'
 < # wol
-< alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh user@bsdserver; do sleep 45; done'
+< alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh at@phq2; do sleep 45; done'
 < # vnc
 < alias servervnc='server vncserver -depth 24 -geometry 1366x768'
 < alias xxservervnc='server vncserver -kill :1'
-51,53c41,43
+49,51c41,43
 < alias ls='ls --color=auto -lh'
 < alias lsa='ls --color=auto -lha'
 < alias du='du -h --all --max-depth=1'
@@ -21,14 +19,13 @@
 > alias ls='ls -lh'
 > alias lsa='ls -lha'
 > alias du='du -h -d 1'
-55c45
+53c45
 < alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$(date +%F_%H:%M)" --output=$HOME/tmp --verbose --progress --mirror && eject"
 ---
 > alias ubsd="sudo portsnap fetch update && sudo portmaster --no-confirm -adyGH"
-57d46
-< alias dev='cd /home/andrew/Dev'
-81,89d69
-< serverrsync() { rsync -zavmHAX "$1" user@bsdserver:/home/user; }
+80,89d71
+< lvms() { sudo pvs; echo "---"; sudo vgs; echo "---"; sudo lvs; }
+< serverrsync() { rsync -zavmHAX "$1" at@phq2:/home/at; }
 < # systemd shortcuts
 < startd() { sudo systemctl start $1.service ; sudo systemctl status $1.service; }
 < restartd() { sudo systemctl restart $1.service ; sudo systemctl status $1.service; }
