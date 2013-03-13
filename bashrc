@@ -77,6 +77,7 @@ extract () {
         echo "$0: unreadable file: $1" >&2
     fi
 }
+lvms() { sudo pvs; echo "---"; sudo vgs; echo "---"; sudo lvs; }
 serverrsync() { rsync -zavmHAX "$1" at@phq2:/home/at; }
 # systemd shortcuts
 startd() { sudo systemctl start $1.service ; sudo systemctl status $1.service; }
