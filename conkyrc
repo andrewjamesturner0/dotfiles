@@ -39,7 +39,8 @@ ${color}${font ubuntu:size=9}${nodename}: ${color cyan}${sysname} ${kernel}${col
 |   Root: ${color cyan}${fs_used /} $color/${fs_size /}\
    Home: ${color cyan}${fs_used /home} $color/${fs_size /home}   \
 |   Core temp:${color cyan} ${exec sensors | grep 'Core 0' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}$color\
-   CPU: ${color cyan}${cpu cpu0}%${color} ${cpugraph cpu0 10,50 000000 000000}\
+   CPU: ${color cyan}${cpu cpu0}% ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${color}\
+   Loadavg: ${color cyan}${loadavg}${color}\
    RAM: ${color cyan}$mem$color    \
 |   Net-Up: ${upspeedgraph wlp3s0 10,50 000000 000000} ${color cyan}${upspeed wlp3s0}$color/${totalup wlp3s0}\
    Net-Down: ${downspeedgraph wlp3s0 10,50 000000 000000} ${color cyan}${downspeed  wlp3s0}$color/${totaldown wlp3s0}
