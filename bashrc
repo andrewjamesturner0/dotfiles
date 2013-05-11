@@ -25,17 +25,7 @@ fi
 # PS1
 PS1='\u@\h [\w]: '
 
-# ssh
-alias raspi='until ssh user@phq3; do sleep 45; done'
-alias xxraspi='ssh user@phq3 sudo shutdown -Ph now'
-alias ccserver='until ssh at@phq2; do sleep 15; done'
-alias server='ssh at@phq2'
-alias xxserver='ssh at@phq2 sudo shutdown -p now'
-# wol
-alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh at@phq2; do sleep 45; done'
-# vnc
-alias servervnc='server vncserver -depth 24 -geometry 1366x768'
-alias xxservervnc='server vncserver -kill :1'
+# === generic ===
 # git
 alias commit='git commit -am'
 alias add='git add'
@@ -46,12 +36,8 @@ alias checkout='git checkout'
 alias branch='git branch'
 alias rebase='git rebase'
 # misc
-alias ls='ls --color=auto -lh'
-alias lsa='ls --color=auto -lha'
-alias du='du -h --all --max-depth=1'
 alias logs='more *.log | cat'
 alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$(date +%F_%H:%M)" --output=$HOME/tmp --verbose --progress --mirror && eject"
-alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
 alias hist="history | grep"
 # places
 alias home='cd && clear'
@@ -89,6 +75,24 @@ extract () {
     fi
 }
 
+# === phq0 ===
+# ssh
+alias raspi='until ssh user@phq3; do sleep 45; done'
+alias xxraspi='ssh user@phq3 sudo shutdown -Ph now'
+alias ccserver='until ssh at@phq2; do sleep 15; done'
+alias server='ssh at@phq2'
+alias xxserver='ssh at@phq2 sudo shutdown -p now'
+# wol
+alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh at@phq2; do sleep 45; done'
+# vnc
+alias servervnc='server vncserver -depth 24 -geometry 1366x768'
+alias xxservervnc='server vncserver -kill :1'
+# misc
+alias ls='ls --color=auto -lh'
+alias lsa='ls --color=auto -lha'
+alias du='du -h --all --max-depth=1'
+alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
+# functions
 lvms() {
     sudo pvs
     echo "---"
@@ -134,3 +138,10 @@ listd() {
 statusd() {
     sudo systemctl status $1.service
 }
+
+## === phq2 ===
+## misc
+#alias ls='ls -lh'
+#alias lsa='ls -lha'
+#alias du='du -h -d 1'
+#alias ubsd="sudo portsnap fetch update && sudo portmaster --no-confirm -adyGH"
