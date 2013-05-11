@@ -31,3 +31,5 @@ map Y y$                                            " Map Y to act like D and C,
 nnoremap <C-L> :nohl<CR><C-L>                       " Map <C-L> (redraw screen) to also turn off search highlighting until the 
                                                     " next search
 colorscheme LightDefault
+set splitbelow                                      " More natural default splitting direction.
+set splitright
