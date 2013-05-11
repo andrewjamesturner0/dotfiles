@@ -26,8 +26,8 @@ fi
 PS1='\u@\h [\w]: '
 
 # ssh
-alias raspi='until ssh user@Raspberry-pi; do sleep 45; done'
-alias xxraspi='ssh user@Raspberry-pi sudo shutdown -Ph now' 
+alias raspi='until ssh user@phq3; do sleep 45; done'
+alias xxraspi='ssh user@phq3 sudo shutdown -Ph now'
 alias ccserver='until ssh at@phq2; do sleep 15; done'
 alias server='ssh at@phq2'
 alias xxserver='ssh at@phq2 sudo shutdown -p now'
@@ -51,6 +51,8 @@ alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
 alias logs='more *.log | cat'
 alias copy_dvd="dvdbackup --input=/dev/sr0 --name="$(date +%F_%H:%M)" --output=$HOME/tmp --verbose --progress --mirror && eject"
+alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
+alias hist="history | grep"
 # places
 alias home='cd && clear'
 alias dev='cd $HOME/Dev'
@@ -58,9 +60,18 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 # functions
-tarxz() { tar cvf "${1%%/}.tar.xz" "${1%%/}/"; }
-targz() { tar cvf "${1%%/}.tar.gz" "${1%%/}/"; }
-mkcd() { mkdir -p "$1" && cd "$1"; }
+tarxz() {
+    tar cvf "${1%%/}.tar.xz" "${1%%/}/"
+}
+
+targz() {
+    tar cvf "${1%%/}.tar.gz" "${1%%/}/"
+}
+
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
 extract () {
     if [ -r "$1" ]; then
     case "$1" in
@@ -77,13 +88,49 @@ extract () {
         echo "$0: unreadable file: $1" >&2
     fi
 }
-lvms() { sudo pvs; echo "---"; sudo vgs; echo "---"; sudo lvs; }
-serverrsync() { rsync -zavmHAX "$1" at@phq2:/home/at; }
+
+lvms() {
+    sudo pvs
+    echo "---"
+    sudo vgs
+    echo "---"
+    sudo lvs
+}
+
+serverrsync() {
+    rsync -zavmHAX "$1" at@phq2:/home/at/Downloads
+}
+
 # systemd shortcuts
-startd() { sudo systemctl start $1.service ; sudo systemctl status $1.service; }
-restartd() { sudo systemctl restart $1.service ; sudo systemctl status $1.service; }
-stopd() { sudo systemctl stop $1.service ; sudo systemctl status $1.service; }
-enabled() { sudo systemctl enable $1.service ; ls -l /etc/systemd/system/multi-user.target.wants; }
-disabled() { sudo systemctl disable $1.service ; ls -l /etc/systemd/system/multi-user.target.wants; }
-listd() { ls -hl /etc/systemd/system/multi-user.target.wants; }
-statusd() { sudo systemctl status $1.service; }
+startd() {
+    sudo systemctl start $1.service
+    sudo systemctl status $1.service
+}
+
+restartd() {
+    sudo systemctl restart $1.service
+    sudo systemctl status $1.service
+}
+
+stopd() {
+    sudo systemctl stop $1.service
+    sudo systemctl status $1.service
+}
+
+enabled() {
+    sudo systemctl enable $1.service
+    ls -l /etc/systemd/system/multi-user.target.wants
+}
+
+disabled() {
+    sudo systemctl disable $1.service
+    ls -l /etc/systemd/system/multi-user.target.wants
+}
+
+listd() {
+    ls -hl /etc/systemd/system/multi-user.target.wants
+}
+
+statusd() {
+    sudo systemctl status $1.service
+}
