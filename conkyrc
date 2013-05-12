@@ -1,4 +1,5 @@
 alignment bottom_left
+#alignment top_left
 double_buffer yes
 background yes
 border_width 1
@@ -12,8 +13,10 @@ draw_outline no
 draw_shades no
 use_xft yes
 xftfont ubuntu:size=9 
+#xftfont cantarell:size=11
 gap_x 5
 gap_y 1
+#gap_y 10
 minimum_size 1680 3
 net_avg_samples 2
 no_buffers yes
@@ -34,6 +37,7 @@ show_graph_scale no
 show_graph_range no
 
 TEXT
+ === phq0 ===
 ${color}${font ubuntu:size=9}${nodename}: ${color cyan}${sysname} ${kernel}${color}   \
 |   up: ${color cyan}$uptime$color   \
 |   Root: ${color cyan}${fs_used /} $color/${fs_size /}\
@@ -47,3 +51,12 @@ ${cpugraph cpu3 10,15 000000 000000} ${color}\
    RAM: ${color cyan}$mem$color    \
 |   Net-Up: ${upspeedgraph wlp3s0 10,50 000000 000000} ${color cyan}${upspeed wlp3s0}$color/${totalup wlp3s0}\
    Net-Down: ${downspeedgraph wlp3s0 10,50 000000 000000} ${color cyan}${downspeed  wlp3s0}$color/${totaldown wlp3s0}
+
+## === phq2 ===
+#${color}${nodename}: ${color cyan}${sysname} ${kernel}${color}
+#up: ${color cyan}$uptime$color
+#Root: ${color cyan}${fs_used /} $color/${fs_size /}
+#CPU: ${color cyan}${cpu cpu}%${color} ${cpugraph cpu0 10,50 000000 000000}
+#RAM: ${color cyan}$mem$color
+#Net-Up: ${upspeedgraph re0 10,50 000000 000000} ${color cyan}${upspeed re0}$color/${totalup re0}
+#Net-Down: ${downspeedgraph re0 10,50 000000 000000} ${color cyan}${downspeed  re0}$color/${totaldown re0}
