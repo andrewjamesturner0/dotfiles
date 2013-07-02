@@ -92,6 +92,8 @@ alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
 alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
+alias td="vim $HOME/Dropbox/TODO/TODO.txt"
+alias ckr="killall conky && conky && conky -c /home/ajt/Documents/TODO/conkyrc-todo"
 # functions
 lvms() {
     sudo pvs
