@@ -23,7 +23,13 @@ if [ -t 0 -a -t 1 ]; then
 fi
 
 # PS1
-PS1='\u@\h [\w]: '
+if [[ -n "$SSH_CLIENT" ]]; then
+    text="ssh "
+    PS1="\[\e[0;31m\]${text}\u@\h [\w]:\[\e[m\] "
+else
+    PS1='\u@\h [\w]: '
+fi
+
 
 # === generic ===
 # git
