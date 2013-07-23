@@ -4,11 +4,16 @@ m4_include(bashrc-common)
 alias ccserver='until ssh at@phq2; do sleep 15; done'
 alias server='ssh at@phq2'
 alias xxserver='ssh at@phq2 sudo shutdown -p now'
+alias ubuntustart='server "VBoxManage startvm ubuntu-1204 --type headless"'
+alias ubuntu='ssh andrew@ubuntu-vb'
+alias xxubuntu='server "VBoxManage controlvm ubuntu-1204 poweroff"'
 # wol
 alias wakeserver='wol 30:85:a9:3c:4e:3d && until ssh at@phq2; do sleep 45; done'
 # vnc
-alias servervnc='server vncserver -depth 24 -geometry 1366x768'
-alias xxservervnc='server vncserver -kill :1'
+alias servervnc='server "vncserver -depth 24 -geometry 1366x768"'
+alias ubuntuvnc='ubuntu "vncserver -depth 24 -geometry 1366x768"'
+alias xxservervnc='server "vncserver -kill :1"'
+alias xxubuntuvnc='ubuntu "vncserver -kill :1"'
 # misc
 alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
