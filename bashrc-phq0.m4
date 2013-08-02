@@ -4,13 +4,18 @@ m4_include(bashrc-common)
 alias ccserver='until ssh at@phq2; do sleep 15; done'
 alias server='ssh at@phq2'
 alias xxserver='ssh at@phq2 sudo shutdown -p now'
+alias daily_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./daily-phq0.sh"'
+alias all_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./all-phq0.sh"'
+# vnc
+alias servervnc='server vncserver -depth 24 -geometry 1366x768'
+alias xxservervnc='server vncserver -kill :1'
 # misc
 alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
 alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
 alias td="vim $HOME/Dropbox/TODO/TODO.txt"
-alias ckr="killall conky && conky && conky -c /home/ajt/Documents/TODO/conkyrc-todo"
+alias ckr="killall conky && conky && conky -c /home/ajt/Dropbox/TODO/conkyrc-todo"
 
 ## functions
 wakeserver() {
