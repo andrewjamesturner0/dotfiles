@@ -8,8 +8,8 @@ alias archserver='ssh ajt@vm-phq4'
 alias daily_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./daily-phq0.sh"'
 alias all_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./all-phq0.sh"'
 # vnc
-alias servervnc='server vncserver -depth 24 -geometry 1366x768'
-alias xxservervnc='server vncserver -kill :1'
+alias start_vnc='vncserver -depth 24 -geometry 1366x768'
+alias kill_vnc='vncserver -kill :1'
 #pacman
 alias cpc='sudo paccache --remove'
 # misc
