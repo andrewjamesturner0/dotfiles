@@ -22,7 +22,7 @@ alias ckr="killall conky && conky && conky -c /home/ajt/Dropbox/TODO/conkyrc-tod
 
 ## functions
 wakeserver() {
-    wol 30:85:a9:3c:4e:3d 
+    wol 30:85:a9:3c:4e:3d
     sleep 200
     if ping -c 1 phq2 > /dev/null 2>&1; then
         echo 'Server online.'
