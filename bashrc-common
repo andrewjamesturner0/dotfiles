@@ -32,13 +32,7 @@ fi
 
 # git
 alias commit='git commit -am'
-alias add='git add'
-alias status='git status'
-alias push='git push'
-alias pull='git pull'
-alias checkout='git checkout'
-alias branch='git branch'
-alias rebase='git rebase'
+alias g='git'
 # misc
 alias logs='more *.log | cat'
 alias hist="history | grep"
