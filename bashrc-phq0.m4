@@ -12,6 +12,7 @@ alias start_vnc='vncserver -depth 24 -geometry 1366x768'
 alias kill_vnc='vncserver -kill :1'
 #pacman
 alias cpc='sudo paccache --remove'
+alias pacdiff='DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
 # misc
 alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
