@@ -89,3 +89,8 @@ listd() {
 statusd() {
     sudo systemctl status $1.service
 }
+
+start_samba() {
+    sudo systemctl start nmbd.service
+    sudo systemctl start smbd.service
+} 
