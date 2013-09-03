@@ -11,7 +11,7 @@ alias all_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./all-phq0.sh"
 alias start_vnc='vncserver -depth 24 -geometry 1366x768'
 alias kill_vnc='vncserver -kill :1'
 #pacman
-alias cpc='sudo paccache --remove'
+alias cpc='sudo paccache --remove -v'
 alias pacdiff='DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
 # misc
 alias ls='ls --color=auto -lh'
