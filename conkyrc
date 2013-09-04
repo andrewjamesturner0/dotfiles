@@ -12,7 +12,7 @@ draw_graph_borders yes
 draw_outline no
 draw_shades no
 use_xft yes
-xftfont bitstreamvera:size=9
+xftfont bitstreamvera:size=8
 gap_x 5
 gap_y 1
 minimum_size 1680 3
@@ -38,15 +38,16 @@ TEXT
 ## === phq0 ===
 ${color}${nodename}: ${color cyan}${kernel}${color}   \
 |   up: ${color cyan}$uptime$color   \
-|   Root: ${color cyan}${fs_used /} $color/${fs_size /}\
-   Home: ${color cyan}${fs_used /home} $color/${fs_size /home}   \
+|   Root: ${color cyan}${fs_used /}$color/${fs_size /}\
+   Home: ${color cyan}${fs_used /home}$color/${fs_size /home}   \
 |   CPU: ${cpugraph cpu0 10,15 000000 000000} \
 ${cpugraph cpu1 10,15 000000 000000} \
 ${cpugraph cpu2 10,15 000000 000000} \
 ${cpugraph cpu3 10,15 000000 000000} ${color}\
 ${color cyan}${exec sensors | grep 'Core 0' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}$color\
    Loadavg: ${color cyan}${loadavg}${color}\
-   RAM: ${color cyan}$mem$color    \
+   RAM: ${color cyan}$mem$color/$memmax \
+   SWAP: ${color cyan}${swap}${color}/${swapmax}    \
 |   Net-Up: ${upspeedgraph wlp3s0 10,50 000000 000000} ${color cyan}${upspeed wlp3s0}$color/${totalup wlp3s0}\
    Net-Down: ${downspeedgraph wlp3s0 10,50 000000 000000} ${color cyan}${downspeed  wlp3s0}$color/${totaldown wlp3s0}
 ## === phq2 ===
