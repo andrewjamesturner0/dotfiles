@@ -7,9 +7,6 @@ alias xxserver='ssh at@phq2 sudo shutdown -p now'
 alias archserver='ssh ajt@vm-phq4'
 alias daily_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./daily-phq0.sh"'
 alias all_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./all-phq0.sh"'
-# vnc
-alias start_vnc='vncserver -depth 24 -geometry 1366x768'
-alias kill_vnc='vncserver -kill :1'
 #pacman
 alias cpc='sudo paccache --remove -v'
 alias pacdiff='DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
@@ -90,7 +87,7 @@ statusd() {
     sudo systemctl status $1.service
 }
 
-start_samba() {
+smbon() {
     sudo systemctl start nmbd.service
     sudo systemctl start smbd.service
 } 
