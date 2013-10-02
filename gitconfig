@@ -5,6 +5,9 @@
 	editor = vim
 [color]
 	ui = true
+	branch = auto
+	diff = auto
+	status = auto
 [push]
 	default = simple
 [help]
