@@ -1,5 +1,9 @@
 m4_include(bashrc-common)
 
+if [[ -f .bashrc.priv ]]; then
+    . .bashrc.priv
+fi
+
 # ssh
 alias ccserver='until ssh at@phq2; do sleep 15; done'
 alias server='ssh at@phq2'
