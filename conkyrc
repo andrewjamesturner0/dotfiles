@@ -4,7 +4,7 @@ double_buffer yes
 background yes
 border_width 1
 cpu_avg_samples 2
-default_color grey
+default_color white
 default_outline_color white
 default_shade_color white
 draw_borders no
@@ -25,7 +25,7 @@ own_window yes
 own_window_type sticky 
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager 
 own_window_argb_visual yes ##This controls transparency on gnome
-own_window_argb_value 200 ##This controls the opacity
+own_window_argb_value 120 ##This controls the opacity
 pad_percents 2
 stippled_borders 0
 update_interval 2.0
