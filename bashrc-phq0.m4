@@ -21,6 +21,7 @@ alias du='du -h --all --max-depth=1'
 alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
 alias td="vim $HOME/Dropbox/TODO/TODO.txt"
 alias ckr="killall conky && conky && conky -c /home/ajt/Dropbox/TODO/conkyrc-todo"
+alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 
 ## functions
 wakeserver() {
