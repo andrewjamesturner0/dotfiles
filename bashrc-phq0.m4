@@ -5,10 +5,7 @@ if [[ -f .bashrc.priv ]]; then
 fi
 
 # ssh
-alias ccserver='until ssh at@phq2; do sleep 15; done'
-alias server='ssh at@phq2'
-alias xxserver='ssh at@phq2 sudo shutdown -p now'
-alias archserver='ssh ajt@vm-phq4'
+alias xxphq2='ssh at@phq2 sudo shutdown -p now'
 alias daily_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./daily-phq0.sh"'
 alias all_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./all-phq0.sh"'
 #pacman
