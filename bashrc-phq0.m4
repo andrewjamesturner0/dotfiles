@@ -21,8 +21,8 @@ alias ckr="killall conky && conky && conky -c /home/ajt/Dropbox/TODO/conkyrc-tod
 alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 
 ## functions
-wakeserver() {
-    wol 30:85:a9:3c:4e:3d
+wakephq2() {
+    wol bc:5f:f4:ca:25:ec
     sleep 200
     if ping -c 1 phq2 > /dev/null 2>&1; then
         echo 'Server online.'
