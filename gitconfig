@@ -8,8 +8,8 @@
 	branch = auto
 	diff = auto
 	status = auto
-[push]
-	default = simple
+#[push]
+#	default = simple
 [help]
 	autocorrect = 1
 
