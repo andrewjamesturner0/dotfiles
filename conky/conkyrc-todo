@@ -1,0 +1,37 @@
+alignment top_right
+double_buffer yes
+background yes
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont bitstreamvera:size=9
+gap_x 20
+gap_y 40
+minimum_size 80 30
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes 
+own_window_type sticky 
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager 
+own_window_argb_visual yes ##This controls transparency on gnome
+own_window_argb_value 1 ##This controls the opacity
+pad_percents 2
+stippled_borders 0
+update_interval 2.0
+uppercase no
+use_spacer left
+show_graph_scale no
+show_graph_range no
+
+TEXT
+${exec cat /home/at13749/Dropbox/todo/TODO.md}
