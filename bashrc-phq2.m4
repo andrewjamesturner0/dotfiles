@@ -9,6 +9,7 @@ alias ls='ls -lh'
 alias lsa='ls -lha'
 alias du='du -h -d 1'
 alias ubsd="sudo portsnap fetch update && sudo portmaster --no-confirm --delete-build-only --packages-build -adyGH"
+alias pmcheck="sudo portsnap fetch update && sudo portmaster -L"
 alias pminstall='sudo portmaster --no-confirm --delete-build-only --packages-build -dyGH'
 alias zfson="/home/at/Dev/zfson/zfson.sh"
 alias vbm='VBoxManage'
