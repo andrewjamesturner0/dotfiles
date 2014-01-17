@@ -1,15 +1,28 @@
-phq0:
-	m4 --prefix-builtins bashrc-phq0.m4 > bashrc
-	m4 --prefix-builtins vimrc-phq0.m4 > vimrc
+M4 = m4
+PREFIX = --prefix-builtins
+RM = rm
+OUTDIR = GENERATED
 
-phq2:
-	gm4 --prefix-builtins bashrc-phq2.m4 > bashrc
-	gm4 --prefix-builtins vimrc-phq2.m4 > vimrc
+# Dependencies
+phq0: $(OUTDIR)/phq0.bashrc $(OUTDIR)/phq0.vimrc $(OUTDIR)/phq0.conkyrc
 
-phq4:
-	m4 --prefix-builtins bashrc-phq4.m4 > bashrc
-	m4 --prefix-builtins vimrc-phq0.m4 > vimrc
+phq2: $(OUTDIR)/phq2.bashrc $(OUTDIR)/phq2.vimrc
 
-ubuntu:
-	m4 --prefix-builtins bashrc-ubuntu.m4 > bashrc
-	m4 --prefix-builtins vimrc-phq2.m4 > vimrc
+ubuntu: $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc $(OUTDIR)/ubuntu.conkyrc
+
+handbrake: $(OUTDIR)/handbrake.bashrc
+
+# Rules
+$(OUTDIR)/%.bashrc: bash/%.m4
+	$(M4) $(PREFIX) $^ > $@
+
+$(OUTDIR)/%.vimrc: vim/%.m4
+	$(M4) $(PREFIX) $^ > $@
+
+$(OUTDIR)/%.conkyrc: conky/%.m4
+	$(M4) $(PREFIX) $^ > $@
+
+
+.PHONY: clean
+clean:
+	$(RM) $(OUTDIR)/*
