@@ -5,9 +5,9 @@ if [[ -f .bashrc.priv ]]; then
 fi
 
 # ssh
-alias xxphq2='ssh at@phq2 sudo shutdown -p now'
-alias daily_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./daily-phq0.sh"'
-alias all_backup='ssh root@phq2 "cd /home/at/Dev/backup-server && ./all-phq0.sh"'
+alias xxphq2='ssh ajt@phq2 sudo shutdown -p now'
+alias daily_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./daily-phq0.sh"'
+alias all_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./all-phq0.sh"'
 #pacman
 alias cpc='sudo paccache --remove -v'
 alias pacdiff='DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
@@ -27,7 +27,7 @@ wakephq2() {
     if ping -c 1 phq2 > /dev/null 2>&1; then
         echo 'Server online.'
         echo '>> START ZFS!'
-        ssh at@phq2
+        ssh ajt@phq2
     else
         echo 'Server offline.'
     fi
@@ -37,7 +37,7 @@ start_vm() {
     local server_name=$1
     if ping -c 1 phq2 > /dev/null 2>&1; then
         echo "Host server online."
-        ssh at@phq2 "VBoxManage startvm $server_name --type headless"
+        ssh ajt@phq2 "VBoxManage startvm $server_name --type headless"
     else
         echo "Host server offline."
     fi
@@ -52,7 +52,7 @@ lvms() {
 }
 
 serverrsync() {
-    rsync -zavmHAX "$1" at@phq2:/home/at/Downloads
+    rsync -zavmHAX "$1" ajt@phq2:/home/ajt/Downloads
 }
 
 # systemd shortcuts

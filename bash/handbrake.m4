@@ -19,7 +19,7 @@ lvms() {
 }
 
 serverrsync() {
-    rsync -zavmHAX "$1" at@phq2:/home/at/Downloads
+    rsync -zavmHAX "$1" ajt@phq2:/home/ajt/Downloads
 }
 
 # systemd shortcuts
