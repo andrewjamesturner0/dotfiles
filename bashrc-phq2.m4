@@ -1,5 +1,9 @@
 m4_include(bashrc-common)
 
+# bash completion
+[[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
+	source /usr/local/share/bash-completion/bash_completion.sh
+
 # misc
 alias ls='ls -lh'
 alias lsa='ls -lha'
