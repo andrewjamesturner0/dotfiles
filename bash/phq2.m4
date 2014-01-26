@@ -13,3 +13,4 @@ alias pmcheck="sudo portsnap fetch update && sudo portmaster -L"
 alias pminstall='sudo portmaster --no-confirm --delete-build-only --packages-build -dyGH'
 alias zfson="/home/ajt/Dev/zfson/zfson.sh"
 alias vbm='VBoxManage'
+alias cputemp='sysctl -a | grep temperature'
