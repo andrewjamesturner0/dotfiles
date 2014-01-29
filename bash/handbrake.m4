@@ -1,7 +1,7 @@
 m4_include(bash/common)
 
 #pacman
-alias cpc='sudo paccache --remove'
+alias cpc='sudo paccache --remove -v'
 alias pacdiff='DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
 # misc
 alias ls='ls --color=auto -lh'
