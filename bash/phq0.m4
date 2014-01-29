@@ -1,4 +1,4 @@
-m4_include(bashrc-common)
+m4_include(bash/common)
 
 if [[ -f .bashrc.priv ]]; then
     . .bashrc.priv

@@ -1,6 +1,6 @@
 # Include common settings
 #
-m4_include(conkyrc-common)
+m4_include(conky/common)
 #
 # Main conky config
 #

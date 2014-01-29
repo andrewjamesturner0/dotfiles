@@ -1,1 +1,1 @@
-m4_include(vimrc-common)
+m4_include(vim/common)

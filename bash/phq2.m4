@@ -1,4 +1,4 @@
-m4_include(bashrc-common)
+m4_include(bash/common)
 
 # bash completion
 [[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
