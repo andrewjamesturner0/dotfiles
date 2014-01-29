@@ -8,4 +8,5 @@ fi
 alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
-#alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
+alias ckr="killall conky && conky && conky -c $HOME/Dev/dotfiles/conky/conkyrc-todo"
+alias td="vim $HOME/Dropbox/todo/TODO.md"
