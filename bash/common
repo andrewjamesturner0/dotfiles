@@ -36,6 +36,7 @@ alias g='git'
 # misc
 alias logs='more *.log | cat'
 alias hist="history | grep"
+alias c='clear'
 # places
 alias home='cd && clear'
 alias dev='cd $HOME/Dev'
