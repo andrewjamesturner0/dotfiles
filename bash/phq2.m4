@@ -4,6 +4,10 @@ m4_include(bash/common)
 [[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
         source /usr/local/share/bash-completion/bash_completion.sh
 
+# display zpool status
+[[ -f $HOME/.zpoolstatus.dat ]] && \
+    tail -n 12 $HOME/.zpoolstatus.dat
+
 # misc
 alias ls='ls -lh'
 alias lsa='ls -lha'
