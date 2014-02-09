@@ -93,3 +93,11 @@ smbon() {
     sudo systemctl start nmbd.service
     sudo systemctl start smbd.service
 } 
+
+batmax() {
+    sudo /usr/lib/perl5/vendor_perl/tpacpi-bat stopChargeThreshold 0 "$1"
+}
+
+batstart() {
+    sudo /usr/lib/perl5/vendor_perl/tpacpi-bat startChargeThreshold 0 "$1"
+}
