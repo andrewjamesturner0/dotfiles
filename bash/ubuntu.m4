@@ -10,4 +10,4 @@ alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
 alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 alias ckr="killall conky && conky && conky -c $HOME/Dev/dotfiles/conky/conkyrc-todo"
-alias td="vim $HOME/Dropbox/todo/TODO.md"
+alias td="vim $HOME/TODO/TODO.md"

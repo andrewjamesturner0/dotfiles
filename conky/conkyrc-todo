@@ -34,4 +34,4 @@ show_graph_scale no
 show_graph_range no
 
 TEXT
-${exec cat /home/at13749/Dropbox/todo/TODO.md}
+${exec cat /home/at13749/TODO/TODO.md}
