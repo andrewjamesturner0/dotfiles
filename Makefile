@@ -12,7 +12,7 @@ phq2: $(OUTDIR) $(OUTDIR)/phq2.bashrc $(OUTDIR)/phq2.vimrc
 
 ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc $(OUTDIR)/ubuntu.conkyrc
 
-handbrake: $(OUTDIR) $(OUTDIR)/handbrake.bashrc
+handbrake: $(OUTDIR) $(OUTDIR)/handbrake.bashrc $(OUTDIR)/handbrake.vimrc $(OUTDIR)/handbrake.conkyrc
 
 # Rules
 $(OUTDIR):
