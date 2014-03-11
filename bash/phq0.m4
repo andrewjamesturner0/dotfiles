@@ -20,6 +20,7 @@ alias td="vim $HOME/TODO/TODO.md"
 alias tb="vim $HOME/TODO/to-buy.md"
 alias ckr="killall conky && conky && conky -c /home/ajt/TODO/conkyrc-todo"
 alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
+alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
 
 ## functions
 wakephq2() {
