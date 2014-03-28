@@ -17,9 +17,10 @@ alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
 alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
-alias td="vim $HOME/TODO/TODO.md"
+alias tdw="vim $HOME/TODO/TODO-work.md"
+alias tdp="vim $HOME/TODO/TODO-play.md"
 alias tb="vim $HOME/TODO/to-buy.md"
-alias ckr="killall conky && conky && conky -c /home/ajt/TODO/conkyrc-todo"
+alias ckr="killall conky && conky && conky -c /home/ajt/TODO/conkyrc-todo-work && conky -c /home/ajt/TODO/conkyrc-todo-play"
 alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
 
