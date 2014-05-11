@@ -12,6 +12,7 @@ alias all_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./all-phq0.sh
 alias cpc='sudo paccache --remove -v'
 alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
 alias syu='sudo pacman -Syu --noconfirm'
+alias aurupdate='for i in $(aurchecker | grep https); do aurmaker -u $i; done'
 # misc
 alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
