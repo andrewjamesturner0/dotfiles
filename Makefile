@@ -16,7 +16,7 @@ handbrake: $(OUTDIR) $(OUTDIR)/handbrake.bashrc $(OUTDIR)/handbrake.vimrc $(OUTD
 
 # Rules
 $(OUTDIR):
-	if [[ ! -d $(OUTDIR) ]]; then mkdir $(OUTDIR); fi
+	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
 
 $(OUTDIR)/%.bashrc: bash/%.m4 bash/common
 	$(M4) $(PREFIX) $< > $@
