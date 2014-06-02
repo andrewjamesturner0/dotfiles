@@ -18,7 +18,7 @@ handbrake: $(OUTDIR) $(OUTDIR)/handbrake.bashrc $(OUTDIR)/handbrake.vimrc $(OUTD
 $(OUTDIR):
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
 
-$(OUTDIR)/%.bashrc: bash/%.m4 bash/common
+$(OUTDIR)/%.bashrc: bash/%.m4 bash/common bash/archlinux.generic
 	$(M4) $(PREFIX) $< > $@
 	ln -sf $(DOTDIR)/$@ $(HOME)/.bashrc
 
