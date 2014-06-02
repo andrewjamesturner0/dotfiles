@@ -35,6 +35,8 @@ fi
 alias commit='git commit -am'
 alias g='git'
 # misc
+alias ls='ls --color=auto -lh'
+alias lsa='ls --color=auto -lha'
 alias logs='more *.log | cat'
 alias hist="history | grep"
 alias c='clear'
