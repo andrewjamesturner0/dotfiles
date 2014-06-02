@@ -14,6 +14,8 @@ ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc $(OUTDIR)/ubunt
 
 handbrake: $(OUTDIR) $(OUTDIR)/handbrake.bashrc $(OUTDIR)/handbrake.vimrc $(OUTDIR)/handbrake.conkyrc
 
+arch: $(OUTDIR) $(OUTDIR)/arch.bashrc $(OUTDIR)/arch.vimrc
+
 # Rules
 $(OUTDIR):
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
