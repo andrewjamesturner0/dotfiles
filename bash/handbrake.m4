@@ -2,7 +2,6 @@ m4_include(bash/common)
 m4_include(bash/archlinux.generic)
 
 # misc
-alias du='du -h --all --max-depth=1'
 alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
 
 ## functions

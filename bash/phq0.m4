@@ -10,7 +10,6 @@ alias xxphq2='ssh ajt@phq2 sudo shutdown -p now'
 alias daily_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./daily-phq0.sh"'
 alias all_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./all-phq0.sh"'
 # misc
-alias du='du -h --all --max-depth=1'
 alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
 alias tdw="vim $HOME/TODO/TODO-work.md"
 alias tdp="vim $HOME/TODO/TODO-play.md"

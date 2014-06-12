@@ -6,7 +6,6 @@ if [[ -f .bashrc.priv ]]; then
 fi
 
 # misc
-alias du='du -h --all --max-depth=1'
 alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 alias tdw="vim $HOME/TODO/TODO-work.md"
 alias tdp="vim $HOME/TODO/TODO-play.md"

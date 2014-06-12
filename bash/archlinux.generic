@@ -5,6 +5,9 @@ alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
 alias syu='sudo pacman -Syu --noconfirm'
 alias aurupdate='for i in $(aurchecker | grep https); do aurmaker -u $i; done'
 
+#misc
+alias du='du -h --all --max-depth=1'
+
 # systemd shortcuts
 startd() {
     sudo systemctl start $1.service
