@@ -59,9 +59,9 @@ smbon() {
 } 
 
 batmax() {
-    sudo /usr/lib/perl5/vendor_perl/tpacpi-bat stopChargeThreshold 0 "$1"
+    sudo /usr/bin/tpacpi-bat -s SP 0 "$1"
 }
 
 batstart() {
-    sudo /usr/lib/perl5/vendor_perl/tpacpi-bat startChargeThreshold 0 "$1"
+    sudo /usr/bin/tpacpi-bat -s ST 0 "$1"
 }
