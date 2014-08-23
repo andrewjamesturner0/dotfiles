@@ -16,3 +16,4 @@ alias pminstall='sudo portmaster --no-confirm --delete-build-only --packages-bui
 alias zfson="/home/ajt/Dev/zfson/zfson.sh"
 alias vbm='VBoxManage'
 alias cputemp='sysctl -a | grep temperature'
+alias pkgchecker="sudo pkg update; sudo pkg version | grep '<'; sudo pkg audit -F"
