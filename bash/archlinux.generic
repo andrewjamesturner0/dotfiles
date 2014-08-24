@@ -4,9 +4,6 @@ alias cpc='sudo paccache --remove -v'
 alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
 alias syu='sudo pacman -Syu --noconfirm'
 
-#misc
-alias du='du -h --all --max-depth=1'
-
 # systemd shortcuts
 startd() {
     sudo systemctl start $1.service

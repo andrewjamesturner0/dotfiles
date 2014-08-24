@@ -1,0 +1,4 @@
+# Options common to linux
+alias ls='ls --color=auto -lh'
+alias lsa='ls --color=auto -lha'
+alias du='du -h --all --max-depth=1'

@@ -24,7 +24,7 @@ ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc
 $(OUTDIR):
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
 
-$(OUTDIR)/%.bashrc: bash/%.m4 bash/common bash/archlinux.generic bash/ubuntu.generic
+$(OUTDIR)/%.bashrc: bash/%.m4 bash/common bash/common.linux bash/archlinux.generic bash/ubuntu.generic
 	$(M4) $(PREFIX) $< > $@
 	ln -sf $(DOTDIR)/$@ $(HOME)/.bashrc
 

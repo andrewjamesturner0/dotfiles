@@ -1,4 +1,3 @@
 # Ubuntu Generic
 #apt
 alias agu='sudo apt-get update; sudo apt-get upgrade -y'
-alias du='du -h --all --max-depth=1'
