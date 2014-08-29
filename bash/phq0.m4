@@ -6,7 +6,6 @@ if [[ -f .bashrc.priv ]]; then
 fi
 
 # ssh
-alias xxphq2='ssh ajt@phq2 sudo shutdown -p now'
 alias daily_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./daily-phq0.sh"'
 alias all_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./all-phq0.sh"'
 
@@ -20,18 +19,6 @@ alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
 
 ## functions
-wakephq2() {
-    wol bc:5f:f4:ca:25:ec
-    sleep 200
-    if ping -c 1 phq2 > /dev/null 2>&1; then
-        echo 'Server online.'
-        echo '>> START ZFS!'
-        ssh ajt@phq2
-    else
-        echo 'Server offline.'
-    fi
-}
-
 start_vm() {
     local server_name=$1
     if ping -c 1 phq2 > /dev/null 2>&1; then
@@ -48,10 +35,6 @@ lvms() {
     sudo vgs
     echo "---"
     sudo lvs
-}
-
-serverrsync() {
-    rsync -zavmHAX "$1" ajt@phq2:/home/ajt/Downloads
 }
 
 smbon() {
