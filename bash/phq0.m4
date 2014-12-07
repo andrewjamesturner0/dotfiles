@@ -50,3 +50,7 @@ batmax() {
 batstart() {
     sudo /usr/bin/tpacpi-bat -s ST 0 "$1"
 }
+
+# ruby
+PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+
