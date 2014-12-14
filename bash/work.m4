@@ -8,9 +8,9 @@ fi
 
 # misc
 alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
-alias tdw="vim $HOME/TODO/TODO-work.md"
-alias tdp="vim $HOME/TODO/TODO-play.md"
-alias tb="vim $HOME/TODO/to-buy.md"
+alias tdw="vim $HOME/TODO/TODO-work.txt"
+alias tdp="vim $HOME/TODO/TODO-play.txt"
+alias tb="vim $HOME/TODO/to-buy.txt"
 alias ckr="killall conky && conky && conky -c $HOME/.work-todo.conkyrc && conky -c $HOME/.play-todo.conkyrc"
 alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
 alias d2k='mount /mnt/networkfs/D2K'
