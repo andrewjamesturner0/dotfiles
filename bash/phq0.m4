@@ -6,10 +6,6 @@ if [[ -f .bashrc.priv ]]; then
     . .bashrc.priv
 fi
 
-# ssh
-alias daily_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./daily-phq0.sh"'
-alias all_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./all-phq0.sh"'
-
 # misc
 alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
 alias tdw="vim $HOME/TODO/TODO-work.txt"
