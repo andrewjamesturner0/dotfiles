@@ -15,16 +15,6 @@ alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
 
 ## functions
-start_vm() {
-    local server_name=$1
-    if ping -c 1 phq2 > /dev/null 2>&1; then
-        echo "Host server online."
-        ssh ajt@phq2 "VBoxManage startvm $server_name --type headless"
-    else
-        echo "Host server offline."
-    fi
-}
-
 lvms() {
     sudo pvs
     echo "---"
