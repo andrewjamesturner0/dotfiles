@@ -15,14 +15,6 @@ alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
 
 ## functions
-lvms() {
-    sudo pvs
-    echo "---"
-    sudo vgs
-    echo "---"
-    sudo lvs
-}
-
 smbon() {
     sudo systemctl start nmbd.service
     sudo systemctl start smbd.service
