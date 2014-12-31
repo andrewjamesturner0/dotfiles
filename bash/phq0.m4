@@ -15,11 +15,6 @@ alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
 
 ## functions
-smbon() {
-    sudo systemctl start nmbd.service
-    sudo systemctl start smbd.service
-} 
-
 batmax() {
     sudo /usr/bin/tpacpi-bat -s SP 0 "$1"
 }
