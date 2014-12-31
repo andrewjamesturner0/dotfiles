@@ -14,15 +14,6 @@ alias ckr="killall conky && conky && conky -c $HOME/.work-todo.conkyrc && conky 
 alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
 
-## functions
-batmax() {
-    sudo /usr/bin/tpacpi-bat -s SP 0 "$1"
-}
-
-batstart() {
-    sudo /usr/bin/tpacpi-bat -s ST 0 "$1"
-}
-
 # ruby
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 
