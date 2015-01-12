@@ -8,6 +8,7 @@ fi
 
 # misc
 alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
+alias youtube-dl-audio="youtube-dl -x --audio-format mp3 --restrict-filenames --output '%(title)s.%(ext)s'"
 alias tdw="vim $HOME/TODO/TODO-work.txt"
 alias tdp="vim $HOME/TODO/TODO-play.txt"
 alias ckr="killall conky && conky && conky -c $HOME/.work-todo.conkyrc && conky -c $HOME/.play-todo.conkyrc"
