@@ -14,7 +14,6 @@ alias all_backup='ssh root@phq2 "cd /home/ajt/Dev/backup-server && ./all-phq0.sh
 alias atgpg="gpg --encrypt --recipient 'Andrew Turner' ${1}"
 alias tdw="vim $HOME/TODO/TODO-work.txt"
 alias tdp="vim $HOME/TODO/TODO-play.txt"
-alias tb="vim $HOME/TODO/to-buy.txt"
 alias ckr="killall conky && conky && conky -c $HOME/.work-todo.conkyrc && conky -c $HOME/.play-todo.conkyrc"
 alias youtube-dl="youtube-dl --restrict-filenames --output '%(title)s.%(ext)s'"
 alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
