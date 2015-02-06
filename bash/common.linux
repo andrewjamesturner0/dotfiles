@@ -2,3 +2,6 @@
 alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
+
+# Disable R 'save workspace' prompt
+alias R='R --no-save'
