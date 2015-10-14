@@ -4,6 +4,9 @@ m4_include(bash/common)
 [[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
         source /usr/local/share/bash-completion/bash_completion.sh
 
+# PATH
+[[ -d $HOME/Bin/freebsd ]] && PATH="$PATH:$HOME/Bin/freebsd"
+
 # misc
 alias ls='ls -lh'
 alias lsa='ls -alh'

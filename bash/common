@@ -5,7 +5,6 @@
 
 # shell options
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core"
-[[ -d $HOME/Bin ]] && PATH="$PATH:$HOME/Bin"
 export EDITOR=vim
 if [ -t 0 -a -t 1 ]; then
     #kill flow control
