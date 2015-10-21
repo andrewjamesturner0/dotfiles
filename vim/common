@@ -16,6 +16,9 @@ set showcmd
 " Highlight searches 
 set hlsearch
 
+" Search as characters are typed
+set incsearch
+
 set ignorecase
 set smartcase
 
