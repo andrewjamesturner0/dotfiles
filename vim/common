@@ -77,3 +77,6 @@ nnoremap <C-L> :nohl<CR><C-L>
 " More natural default splitting direction.
 set splitbelow 
 set splitright
+
+" Highlight matching parenthesis-like characters
+set showmatch
