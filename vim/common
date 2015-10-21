@@ -80,3 +80,8 @@ set splitright
 
 " Highlight matching parenthesis-like characters
 set showmatch
+
+" enable folding
+set foldenable
+set foldlevelstart=5
+set foldmethod=indent
