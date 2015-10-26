@@ -85,3 +85,21 @@ set showmatch
 set foldenable
 set foldlevelstart=5
 set foldmethod=indent
+
+
+" FUNCTIONS
+" Prose mode
+func! ProseMode() 
+  setlocal noexpandtab 
+  setlocal spell spelllang=en_gb 
+  set complete+=s
+  setlocal formatoptions=ant
+  setlocal textwidth=80
+  setlocal wrapmargin=0
+  setlocal noautoindent
+  setlocal nocindent
+  setlocal nosmartindent
+  setlocal indentexpr=
+  colorscheme solarized
+  endfu 
+com! PR call ProseMode()
