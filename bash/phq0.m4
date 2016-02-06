@@ -18,3 +18,5 @@ alias UOB='rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%'
 # ruby
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 
+# gnome keyring
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
