@@ -9,7 +9,7 @@ DOTDIR = $(HOME)/Dev/dotfiles
 # specific computers
 phq0: $(OUTDIR) $(OUTDIR)/phq0.bashrc $(OUTDIR)/phq0.vimrc $(OUTDIR)/phq0.conkyrc
 
-phq2: $(OUTDIR) $(OUTDIR)/phq2.bashrc $(OUTDIR)/phq2.vimrc
+tourmalet: $(OUTDIR) $(OUTDIR)/tourmalet.bashrc $(OUTDIR)/tourmalet.vimrc
 
 work: $(OUTDIR) $(OUTDIR)/work.bashrc $(OUTDIR)/work.vimrc $(OUTDIR)/work.conkyrc
 
