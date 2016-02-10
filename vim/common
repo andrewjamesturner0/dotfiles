@@ -103,3 +103,9 @@ func! ProseMode()
   colorscheme solarized
   endfu 
 com! PR call ProseMode()
+
+" Text width shotrcut
+func! TextWidthShortcut()
+  setlocal textwidth=80
+  endfu
+com! TW80 call TextWidthShortcut()
