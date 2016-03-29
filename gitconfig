@@ -19,3 +19,5 @@
 	autosetuprebase = always
 [merge]
 	conflictstyle = diff3
+[push]
+	default = matching
