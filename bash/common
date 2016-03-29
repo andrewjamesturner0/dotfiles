@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 # shell options
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl"
 export EDITOR=vim
 export HISTSIZE=500000
 export HISTFILESIZE=100000
