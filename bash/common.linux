@@ -3,6 +3,9 @@
 alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
+if which 'pandoc' > /dev/null 2>&1; then
+   eval "$(pandoc --bash-completion)"
+fi
 
 # Disable R 'save workspace' prompt
 alias R='R --no-save'
