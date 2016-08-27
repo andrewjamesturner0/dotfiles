@@ -1,8 +1,6 @@
 #   Arch Linux Generic
-#pacman
-alias cpc='sudo paccache --remove -v'
+# pacman
 alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
-alias syu='sudo pacman -Syu --noconfirm'
 
 # systemd shortcuts
 startd() {
