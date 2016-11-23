@@ -86,6 +86,9 @@ set foldenable
 set foldlevelstart=5
 set foldmethod=indent
 
+" stop join commands adding double spaces after a full stop
+set nojoinspaces
+
 
 " FUNCTIONS
 " Prose mode
