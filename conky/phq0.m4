@@ -6,8 +6,8 @@ m4_include(conky/common)
 #
 ${color}${nodename}: ${color cyan}${kernel}${color}   \
 |   Uptime: ${color cyan}$uptime$color   \
-|   Root: ${color cyan}${fs_used /}$color/${fs_size /}\
-   Home: ${color cyan}${fs_used /home}$color/${fs_size /home}   \
+|   Root: ${color cyan}${fs_used /}$color   \
+   Home: ${color cyan}${fs_used /home}$color   \
 |   CPU: ${cpugraph cpu0 10,15 000000 000000} \
 ${cpugraph cpu1 10,15 000000 000000} \
 ${cpugraph cpu2 10,15 000000 000000} \
