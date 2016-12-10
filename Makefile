@@ -7,7 +7,7 @@ DOTDIR = $(HOME)/Dev/dotfiles
 
 # Dependencies
 # specific computers
-phq0: $(OUTDIR) $(OUTDIR)/phq0.bashrc $(OUTDIR)/phq0.vimrc $(OUTDIR)/phq0.conkyrc
+galibier: $(OUTDIR) $(OUTDIR)/galibier.bashrc $(OUTDIR)/galibier.vimrc $(OUTDIR)/galibier.conkyrc
 
 tourmalet: $(OUTDIR) $(OUTDIR)/tourmalet.bashrc $(OUTDIR)/tourmalet.vimrc
 
