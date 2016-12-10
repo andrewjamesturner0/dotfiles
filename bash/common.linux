@@ -1,5 +1,5 @@
 # Options common to linux
-[[ -d $HOME/Bin/linux ]] && PATH="$PATH:$HOME/Bin/linux"
+[[ -d $HOME/Bin ]] && PATH="$PATH:$HOME/Bin"
 alias ls='ls --color=auto -lh'
 alias lsa='ls --color=auto -lha'
 alias du='du -h --all --max-depth=1'
