@@ -4,16 +4,15 @@ m4_include(conky/common)
 #
 # Main conky config
 #
-${color}${nodename}: ${color cyan}${kernel}${color}   \
-|   Uptime: ${color cyan}$uptime$color   \
-|   Root: ${color cyan}${fs_used /}$color/${fs_size /}  \
+${nodename}: ${kernel}   \
+|   Uptime: $uptime   \
+|   Root: ${fs_used /}/${fs_size /}  \
 |   CPU: ${cpugraph cpu0 10,15 000000 000000} \
 ${cpugraph cpu1 10,15 000000 000000} \
 ${cpugraph cpu2 10,15 000000 000000} \
-${cpugraph cpu3 10,15 000000 000000} ${color}\
-${color cyan}${exec sensors | grep 'Core 0' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}$color\
-   Loadavg: ${color cyan}${loadavg}${color}\
-   RAM: ${color cyan}$mem$color/$memmax \
-   SWAP: ${color cyan}${swap}${color}/${swapmax}    \
-|   Up: ${upspeedgraph eno1 10,50 000000 000000} ${color cyan}${upspeed eno1}$color/${totalup eno1}\
-   Down: ${downspeedgraph eno1 10,50 000000 000000} ${color cyan}${downspeed  eno1}$color/${totaldown eno1}
+${cpugraph cpu3 10,15 000000 000000} \
+${exec sensors | grep 'Core 0' | sed -e s/°C.*\)/°C/ -e s/Core.*+//}\
+   RAM: $mem/$memmax \
+   SWAP: ${swap}/${swapmax}    \
+|   Up: ${upspeedgraph wlp58s0 10,50 000000 000000} ${upspeed wlp58s0}/${totalup wlp58s0}\
+   Down: ${downspeedgraph wlp58s0 10,50 000000 000000} ${downspeed  wlp58s0}/${totaldown wlp58s0}
