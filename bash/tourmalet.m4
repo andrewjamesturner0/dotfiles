@@ -11,11 +11,6 @@ m4_include(bash/common)
 alias ls='ls -lh'
 alias lsa='ls -alh'
 alias du='du -h -d 1'
-alias ubsd="sudo portsnap fetch update && sudo portmaster --no-confirm --delete-build-only --packages-build -adyGH"
-alias pmcheck="sudo portsnap fetch update && sudo portmaster -L"
-alias pminstall='sudo portmaster --no-confirm --delete-build-only --packages-build -dyGH'
-alias zfson="/home/ajt/Dev/zfson/zfson.sh"
-alias vbm='VBoxManage'
-alias cputemp='sysctl -a | grep temperature'
 alias pkgchecker="sudo pkg update; sudo pkg version | grep '<'; sudo pkg audit -F"
 alias pkgupdate="sudo pkg update; sudo pkg upgrade -y"
+alias baseupdate="sudo freebsd-update fetch install"
