@@ -103,7 +103,7 @@ func! ProseMode()
   setlocal nocindent
   setlocal nosmartindent
   setlocal indentexpr=
-  colorscheme solarized
+  colorscheme solarized8_dark_high
   endfu 
 com! PR call ProseMode()
 
