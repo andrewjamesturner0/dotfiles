@@ -112,3 +112,9 @@ func! TextWidthShortcut()
   setlocal textwidth=80
   endfu
 com! TW80 call TextWidthShortcut()
+
+" Trim trailing whitespace
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+    endfu
+com! TWS call TrimWhiteSpace()
