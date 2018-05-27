@@ -7,16 +7,16 @@ DOTDIR = $(HOME)/Dev/dotfiles
 
 # Dependencies
 # specific computers
-galibier: $(OUTDIR) $(OUTDIR)/galibier.bashrc $(OUTDIR)/galibier.vimrc $(OUTDIR)/galibier.conkyrc tmuxconf
+galibier: $(OUTDIR) $(OUTDIR)/galibier.bashrc $(OUTDIR)/galibier.vimrc $(OUTDIR)/galibier.conkyrc tmuxconf gitconf
 
-tourmalet: $(OUTDIR) $(OUTDIR)/tourmalet.bashrc $(OUTDIR)/tourmalet.vimrc tmuxconf
+tourmalet: $(OUTDIR) $(OUTDIR)/tourmalet.bashrc $(OUTDIR)/tourmalet.vimrc tmuxconf gitconf
 
-work: $(OUTDIR) $(OUTDIR)/work.bashrc $(OUTDIR)/work.vimrc $(OUTDIR)/work.conkyrc tmuxconf
+work: $(OUTDIR) $(OUTDIR)/work.bashrc $(OUTDIR)/work.vimrc $(OUTDIR)/work.conkyrc tmuxconf gitconf
 
 # generic
-arch: $(OUTDIR) $(OUTDIR)/arch.bashrc $(OUTDIR)/arch.vimrc tmuxconf
+arch: $(OUTDIR) $(OUTDIR)/arch.bashrc $(OUTDIR)/arch.vimrc tmuxconf gitconf
 
-ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc tmuxconf
+ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc tmuxconf gitconf
 
 # Rules
 $(OUTDIR):
@@ -35,6 +35,9 @@ $(OUTDIR)/%.conkyrc: conky/%.m4 conky/common
 	ln -sf $(DOTDIR)/$@ $(HOME)/.conkyrc
 
 tmuxconf: tmux.conf
+	ln -sf $(DOTDIR)/$< $(HOME)/.$<
+
+gitconf: gitconfig
 	ln -sf $(DOTDIR)/$< $(HOME)/.$<
 
 
