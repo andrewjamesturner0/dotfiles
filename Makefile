@@ -7,16 +7,16 @@ DOTDIR = $(HOME)/Dev/dotfiles
 
 # Dependencies
 # specific computers
-galibier: $(OUTDIR) $(OUTDIR)/galibier.bashrc $(OUTDIR)/galibier.vimrc $(OUTDIR)/galibier.conkyrc
+galibier: $(OUTDIR) $(OUTDIR)/galibier.bashrc $(OUTDIR)/galibier.vimrc $(OUTDIR)/galibier.conkyrc tmuxconf
 
-tourmalet: $(OUTDIR) $(OUTDIR)/tourmalet.bashrc $(OUTDIR)/tourmalet.vimrc
+tourmalet: $(OUTDIR) $(OUTDIR)/tourmalet.bashrc $(OUTDIR)/tourmalet.vimrc tmuxconf
 
-work: $(OUTDIR) $(OUTDIR)/work.bashrc $(OUTDIR)/work.vimrc $(OUTDIR)/work.conkyrc
+work: $(OUTDIR) $(OUTDIR)/work.bashrc $(OUTDIR)/work.vimrc $(OUTDIR)/work.conkyrc tmuxconf
 
 # generic
-arch: $(OUTDIR) $(OUTDIR)/arch.bashrc $(OUTDIR)/arch.vimrc
+arch: $(OUTDIR) $(OUTDIR)/arch.bashrc $(OUTDIR)/arch.vimrc tmuxconf
 
-ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc
+ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc tmuxconf
 
 # Rules
 $(OUTDIR):
@@ -33,6 +33,9 @@ $(OUTDIR)/%.vimrc: vim/%.m4 vim/common
 $(OUTDIR)/%.conkyrc: conky/%.m4 conky/common
 	$(M4) $(PREFIX) $< > $@
 	ln -sf $(DOTDIR)/$@ $(HOME)/.conkyrc
+
+tmuxconf: tmux.conf
+	ln -sf $(DOTDIR)/$< $(HOME)/.$<
 
 
 .PHONY: clean
