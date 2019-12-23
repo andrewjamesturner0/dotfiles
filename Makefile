@@ -7,7 +7,7 @@ DOTDIR = $(HOME)/Dev/dotfiles
 
 # Dependencies
 # specific computers
-galibier: $(OUTDIR) $(OUTDIR)/galibier.bashrc $(OUTDIR)/galibier.vimrc $(OUTDIR)/galibier.conkyrc tmuxconf gitconf
+gavia: $(OUTDIR) $(OUTDIR)/gavia.bashrc $(OUTDIR)/gavia.vimrc $(OUTDIR)/gavia.conkyrc tmuxconf gitconf
 
 tourmalet: $(OUTDIR) $(OUTDIR)/tourmalet.bashrc $(OUTDIR)/tourmalet.vimrc tmuxconf gitconf
 
