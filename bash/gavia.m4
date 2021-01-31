@@ -12,6 +12,7 @@ alias ckr="killall conky; conky"
 alias youtube-dl-audio="youtube-dl -x --audio-format mp3"
 alias obs="vim $HOME/Dev/Obs/obs.csv"
 alias UOB="rdesktop sscmsecuredesktop.cse.bris.ac.uk -d UOB -g 90%"
+alias bonsai="cbonsai -M 10 -L 50 -p -c '%,&'"
 
 # ruby
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
