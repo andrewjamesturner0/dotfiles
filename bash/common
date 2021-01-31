@@ -9,6 +9,9 @@ export EDITOR=vim
 export HISTSIZE=500000
 export HISTFILESIZE=100000
 export HISTCONTROL="erasedups:ignoreboth"
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+
 if [ -t 0 -a -t 1 ]; then
     #kill flow control
     stty -ixon
