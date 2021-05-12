@@ -89,6 +89,9 @@ set foldmethod=indent
 " stop join commands adding double spaces after a full stop
 set nojoinspaces
 
+" set background to dark - dark background sometime not recognised within tmux
+set background=dark
+
 
 " FUNCTIONS
 " Prose mode
