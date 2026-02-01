@@ -1,16 +1,10 @@
 m4_include(bash/common)
+m4_include(bash/common.linux)
+m4_include(bash/archlinux.generic)
 
-# bash completion
-[[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
-        source /usr/local/share/bash-completion/bash_completion.sh
+if [[ -f .bashrc.priv ]]; then
+    . .bashrc.priv
+fi
 
-# PATH
-[[ -d $HOME/Bin ]] && PATH="$PATH:$HOME/Bin"
-
-# misc
-alias ls='ls -lh'
-alias lsa='ls -alh'
-alias du='du -h -d 1'
-alias pkgchecker="sudo pkg update; sudo pkg version | grep '<'; sudo pkg audit -F"
-alias pkgupdate="sudo pkg update; sudo pkg upgrade -y"
-alias baseupdate="sudo freebsd-update fetch install"
+# gnome keyring
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"

@@ -39,9 +39,7 @@ fi
 
 # git
 alias commit='git commit -am'
-alias g='git'
 # misc
-alias logs='more *.log | cat'
 alias hist="history | grep"
 alias c='clear'
 # places
@@ -51,14 +49,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 # functions
-tarxz() {
-    tar cvf "${1%%/}.tar.xz" "${1%%/}/"
-}
-
-targz() {
-    tar cvf "${1%%/}.tar.gz" "${1%%/}/"
-}
-
 mkcd() {
     mkdir -p "$1" && cd "$1"
 }
@@ -82,4 +72,4 @@ extract () {
 
 findfile() {
     find . -type f -iname "*${*}*"
-} 
+}

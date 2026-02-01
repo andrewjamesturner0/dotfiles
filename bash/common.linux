@@ -10,6 +10,3 @@ fi
 # Disable R 'save workspace' prompt
 alias R='R --no-save'
 alias R.update.packages="Rscript -e 'update.packages(checkBuilt=TRUE, ask=FALSE, repos=\"http://cran.rstudio.com\")'"
-
-# vim did.txt file
-alias did="vim +'normal Go' +'r!date' ~/did.txt"
