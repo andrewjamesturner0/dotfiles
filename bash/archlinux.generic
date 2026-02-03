@@ -1,4 +1,5 @@
 #   Arch Linux Generic
+unset PS0
 # pacman
 alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
 alias pacman-dl='sudo pacman -Syuw --noconfirm'
