@@ -5,7 +5,7 @@ OUTDIR = GENERATED
 DOTDIR = $(CURDIR)
 
 # Machine targets
-tourmalet: $(OUTDIR) $(OUTDIR)/tourmalet.bashrc $(OUTDIR)/tourmalet.vimrc tmuxconf gitconf
+archlinux: $(OUTDIR) $(OUTDIR)/archlinux.bashrc $(OUTDIR)/archlinux.vimrc tmuxconf gitconf
 
 ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc tmuxconf gitconf
 
@@ -13,7 +13,7 @@ ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc tmuxconf gitcon
 $(OUTDIR):
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
 
-$(OUTDIR)/%.bashrc: bash/%.m4 bash/common bash/common.linux bash/archlinux.generic bash/ubuntu.generic
+$(OUTDIR)/%.bashrc: bash/%.m4 bash/common bash/archlinux.generic bash/ubuntu.generic
 	$(M4) $(PREFIX) $< > $@
 	ln -sf $(DOTDIR)/$@ $(HOME)/.bashrc
 

@@ -3,3 +3,6 @@ unset PS0
 # pacman
 alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" pacdiff'
 alias pacman-dl='sudo pacman -Syuw --noconfirm'
+
+# gnome keyring
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"

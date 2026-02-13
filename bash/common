@@ -73,3 +73,21 @@ extract () {
 findfile() {
     find . -type f -iname "*${*}*"
 }
+
+# linux
+[[ -d $HOME/Bin ]] && PATH="$PATH:$HOME/Bin"
+alias ls='ls --color=auto -lh'
+alias lsa='ls --color=auto -lha'
+alias du='du -h --all --max-depth=1'
+if which 'pandoc' > /dev/null 2>&1; then
+   eval "$(pandoc --bash-completion)"
+fi
+
+# Disable R 'save workspace' prompt
+alias R='R --no-save'
+alias R.update.packages="Rscript -e 'update.packages(checkBuilt=TRUE, ask=FALSE, repos=\"http://cran.rstudio.com\")'"
+
+# source private config if present
+if [[ -f ~/.bashrc.priv ]]; then
+    . ~/.bashrc.priv
+fi
