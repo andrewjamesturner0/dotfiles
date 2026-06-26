@@ -1,3 +1,8 @@
 # Ubuntu Generic
 #apt
 alias agu='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y'
+
+export PATH="$HOME/.local/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm; auto-activates the default version
