@@ -1,0 +1,28 @@
+# WSL
+if command -v wslpath > /dev/null 2>&1; then
+    # cd to a Windows path; with no argument, use the Windows clipboard
+    wcd() {
+        local winpath dir
+        if [ $# -gt 0 ]; then
+            winpath="$*"
+        else
+            winpath=$(powershell.exe -NoProfile -Command Get-Clipboard 2> /dev/null)
+        fi
+        winpath="${winpath//$'\r'/}"
+        winpath="${winpath#"${winpath%%[![:space:]]*}"}"
+        winpath="${winpath%"${winpath##*[![:space:]]}"}"
+        winpath="${winpath#\"}"
+        winpath="${winpath%\"}"
+        if [ -z "$winpath" ]; then
+            echo "wcd: no path given and clipboard is empty" >&2
+            return 1
+        fi
+        dir=$(wslpath -u "$winpath") || return 1
+        [ -f "$dir" ] && dir=$(dirname "$dir")
+        if [ ! -d "$dir" ]; then
+            echo "wcd: no such directory: $dir" >&2
+            return 1
+        fi
+        cd "$dir"
+    }
+fi

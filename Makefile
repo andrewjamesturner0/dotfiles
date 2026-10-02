@@ -13,7 +13,7 @@ ubuntu: $(OUTDIR) $(OUTDIR)/ubuntu.bashrc $(OUTDIR)/ubuntu.vimrc tmuxconf gitcon
 $(OUTDIR):
 	if [ ! -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi
 
-$(OUTDIR)/%.bashrc: bash/%.m4 bash/common bash/archlinux.generic bash/ubuntu.generic
+$(OUTDIR)/%.bashrc: bash/%.m4 bash/common bash/archlinux.generic bash/ubuntu.generic bash/wsl
 	$(M4) $(PREFIX) $< > $@
 	ln -sf $(DOTDIR)/$@ $(HOME)/.bashrc
 
