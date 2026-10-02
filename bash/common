@@ -4,6 +4,7 @@
 [[ $- != *i* ]] && return
 
 # shell options
+shopt -s extglob  # needed to parse extract() below, with or without a terminal
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl${PATH:+:$PATH}"
 export EDITOR=vim
 export HISTSIZE=500000
@@ -18,7 +19,6 @@ if [ -t 0 -a -t 1 ]; then
     stty -ixoff
     if [ ${BASH_VERSINFO[0]} -ge 4 ]; then
         shopt -s cdspell
-        shopt -s extglob
         shopt -s cmdhist
         shopt -s checkwinsize
         shopt -s no_empty_cmd_completion
